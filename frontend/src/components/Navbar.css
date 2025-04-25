@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.8vh;
+    padding-bottom: 0.5vh;
+  
+    background: rgba(255, 255, 255, 0.6); /* translucent white */
+    backdrop-filter: blur(10px);          /* adds blur to background */
+    -webkit-backdrop-filter: blur(10px);  /* for Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  }
+  
+  #menu {
+    gap: 10%;
+    font-family: var(--bebas);
+    display: flex;
+    letter-spacing: 0.02vw;
+  }
+  
+  .mnu {
+    position: relative;
+    text-wrap: nowrap;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000; /* default color */
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .mnu::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #f55353;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .mnu:hover {
+    color: #f55353;
+  }
+  
+  .mnu:hover::after {
+    transform: scaleX(1);
+  }
+  
+  #nav-btn {
+    font-weight: 100;
+    padding: 1vh 1.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--bebas);
+    border-radius: 9px;
+    color: #f6e34d;
+    border: none;
+    background-color: #f55353;
+    letter-spacing: 0.08vw;
+    gap: 0.1vw;
+    font-size: 2.1vh;
+  }
+  
+  #phn {
+    height: 2.3vh;
+  }
+  #nav-btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+  
