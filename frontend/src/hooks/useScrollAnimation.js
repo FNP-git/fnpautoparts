@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
 
-const useScrollAnimation = (className = '.animate-on-scroll') => {
+const useScrollAnimation = () => {
   useEffect(() => {
-    const elements = document.querySelectorAll(className);
+    // Observe ALL these animation-triggering classes
+    const elements = document.querySelectorAll(
+      '.animate-on-scroll, .fade-up-on-scroll, .slide-left-on-scroll, .slide-right-on-scroll'
+    );
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -19,7 +22,7 @@ const useScrollAnimation = (className = '.animate-on-scroll') => {
     return () => {
       elements.forEach(el => observer.unobserve(el));
     };
-  }, [className]);
+  }, []);
 };
 
 export default useScrollAnimation;

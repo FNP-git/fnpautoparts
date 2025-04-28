@@ -10,6 +10,9 @@ import payment from '../assets/payment.svg';
 import warranty from '../assets/warranty.svg';
 import support from '../assets/support.svg';
 import Scams from './Scams'
+import Services from './Services'
+import Works from './Works'
+import Guide from './Guide'
 
 const Home = () => {
   return (
@@ -57,6 +60,9 @@ const Home = () => {
 
       </div>
       <Scams/>
+      <Services/>
+      <Works/>
+      <Guide/>
     </>
   );
 };

@@ -20,12 +20,23 @@
     align-items: center;
     padding-top: 0.8vh;
     padding-bottom: 0.5vh;
-  
     background: rgba(255, 255, 255, 0.6); /* translucent white */
-    backdrop-filter: blur(10px);          /* adds blur to background */
-    -webkit-backdrop-filter: blur(10px);  /* for Safari support */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+    backdrop-filter: blur(5px);          
+    -webkit-backdrop-filter: blur(10px);  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  
+    /* Animation setup */
+    transform: translateY(-100%);
+    animation: slideDown 0.8s ease forwards;
   }
+  
+  /* Define the slide down animation */
+  @keyframes slideDown {
+    to {
+      transform: translateY(0);
+    }
+  }
+  
   
   #menu {
     gap: 10%;

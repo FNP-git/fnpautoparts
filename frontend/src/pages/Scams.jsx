@@ -6,10 +6,10 @@ import scamCross from '../assets/cross.png';
 import scamTick from '../assets/tick.png';
 import leftImg from '../assets/scam-left.svg';
 import rightImg from '../assets/scam-right.svg';
-import useScrollAnimation from '../hooks/useScrollAnimation'; // Custom hook
+import useScrollAnimation from '../hooks/useScrollAnimation'; // Updated custom hook
 
 const Scams = () => {
-  useScrollAnimation(); // 🛠 Activates scroll animation when elements enter viewport
+  useScrollAnimation(); // Activates scroll animation when elements enter viewport
 
   const redFlags = [
     "Fake websites with no real contact info.",
@@ -31,7 +31,7 @@ const Scams = () => {
 
   return (
     <div id="scm">
-      <div id="top-part" className="animate-on-scroll">
+      <div id="top-part" className="fade-up-on-scroll">
         <h3 className="scam-warning">BEWARE OF AUTO PARTS SCAMS</h3>
         <h2 className="scam-main-heading">“Don’t Get Scammed. Here’s What To Watch Out For — And How FNP Protects You.”</h2>
         <p className="scam-description">
@@ -41,18 +41,18 @@ const Scams = () => {
       </div>
 
       <div className="scam-page">
-        <div className="scam-box animate-on-scroll">
-          <img src={rightImg} alt="scam alert" className="scam-side-img1" />
+        <div className="scam-box fade-up-on-scroll">
+          <img src={rightImg} alt="Scam Warning Left" className="slide-left-on-scroll scam-side-img1" />
           <ScamCard icon={scamCross} title="Red Flags to Watch For" points={redFlags} />
         </div>
 
-        <div className="scam-box animate-on-scroll">
+        <div className="scam-box fade-up-on-scroll">
           <ScamCard icon={scamTick} title="Why You Can Trust FNP Autoparts?" points={trustedBenefits} />
-          <img src={leftImg} alt="verified trust" className="scam-side-img2" />
+          <img src={leftImg} alt="Trust Badge Right" className="slide-right-on-scroll scam-side-img2" />
         </div>
       </div>
 
-      <div className="scam-footer animate-on-scroll">
+      <div className="scam-footer fade-up-on-scroll">
         <p>
           <strong>“Have questions or think you’ve seen a scam? Call us at </strong>
           <span className="scam-highlight-phone">📞 1-888-807-9696</span>

@@ -1,0 +1,31 @@
+#guide-section {
+    padding: 8vh 8vw;
+    background-color: #fefefe;
+    font-family: 'Blinker', sans-serif;
+    text-align: center;
+  }
+  
+  .guide-subtitle {
+    color: #f59e0b;
+    font-size: 2.2vmax;
+    text-transform: uppercase;
+    font-family: var(--bebas);
+    margin-bottom: 1vh;
+    font-weight: 600;
+  }
+  
+  .guide-main-title {
+    font-size: 2vmax;
+    color: #0d2a53;
+    font-weight: 600;
+    margin-bottom: 5vh;
+  }
+  
+  .guide-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4vw;
+  }
+  
