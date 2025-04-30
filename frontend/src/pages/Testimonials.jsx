@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import TestimonialCard from '../components/TestimonialCard';
 import './Testimonials.css';
-import useWorksAnimation from '../hooks/useWorksAnimation'; // custom hook
-
-
-import person1 from '../assets/john.svg'; // You can import different ones later
+import useWorksAnimation from '../hooks/useWorksAnimation';
+import person1 from '../assets/john.svg';
 
 const testimonials = [
   {
@@ -70,16 +68,19 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-    // useWorksAnimation(); // initialize animations
+  useWorksAnimation(); // re-enable global scroll-based animation
+
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [fade, setFade] = useState(true);
+  const cardRef = useRef(null);
 
   const switchTestimonial = (newIndex) => {
-    setFade(false); // reset animation
-    setTimeout(() => {
-      setCurrentIndex(newIndex);
-      setFade(true); // re-trigger animation
-    }, 50);
+    const el = cardRef.current;
+    if (el) {
+      el.classList.remove('animate-slide-fade-in');
+      void el.offsetWidth;
+      el.classList.add('animate-slide-fade-in');
+    }
+    setCurrentIndex(newIndex);
   };
 
   const handlePrev = () => {
@@ -92,25 +93,31 @@ const Testimonials = () => {
     switchTestimonial(newIndex);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   return (
     <div className="testimonials-section fade-up-works">
-  <div className="testimonials-left slide-left-works">
-    <h4 className="testimonial-subtitle">CUSTOMER TESTIMONIALS</h4>
-    <h2 className="testimonial-title">See What Our Customers Say About Us</h2>
-    <button className="read-more">Read More →</button>
-  </div>
+      <div className="testimonials-left slide-left-works">
+        <h4 className="testimonial-subtitle">CUSTOMER TESTIMONIALS</h4>
+        <h2 className="testimonial-title">See What Our Customers Say About Us</h2>
+        <button className="read-more">Read More →</button>
+      </div>
 
-  <div className="testimonials-right fade-up-works">
-    <div className={`testimonial-fade-wrapper ${fade ? 'fade-in' : ''}`}>
-      <TestimonialCard testimonial={testimonials[currentIndex]} />
+      <div className="testimonials-right fade-up-works">
+        <div ref={cardRef} className="testimonial-fade-wrapper animate-slide-fade-in">
+          <TestimonialCard testimonial={testimonials[currentIndex]} />
+        </div>
+        <div className="testimonial-nav">
+          <button onClick={handlePrev}>&lt;</button>
+          <button onClick={handleNext}>&gt;</button>
+        </div>
+      </div>
     </div>
-    <div className="testimonial-nav">
-      <button onClick={handlePrev}>&lt;</button>
-      <button onClick={handleNext}>&gt;</button>
-    </div>
-  </div>
-</div>
-
   );
 };
 

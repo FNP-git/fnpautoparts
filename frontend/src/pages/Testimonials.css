@@ -1,15 +1,20 @@
 
   
-  @keyframes fade {
-    from {
+  @keyframes slideFadeIn {
+    0% {
       opacity: 0;
-      transform: translateX(15px);
+      transform: translateX(25px);
     }
-    to {
+    100% {
       opacity: 1;
-      transform: translateX(0px);
+      transform: translateX(0);
     }
   }
+  
+  .animate-slide-fade-in {
+    animation: slideFadeIn 1s ease forwards;
+  }
+  
   
 .testimonials-section {
     display: flex;
@@ -78,3 +83,5 @@
   .testimonial-nav button:hover {
     transform: scale(1.1);
   }
+  
+  

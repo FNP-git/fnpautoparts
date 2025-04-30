@@ -31,10 +31,10 @@
     }
   }
   
-  #home {
+  #engine {
     position: relative;
     height: 90vh;
-    background-image: url('/hmbg.png');
+    background-image: url('../assets/engbg.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,9 +44,7 @@
     justify-content: space-around;
   }
   
-  
-  
-  #home::before {
+  #engine::before {
     content: '';
     position: absolute;
     top: 0;
@@ -57,36 +55,28 @@
     z-index: 1;
   }
   
-  #hm-left,
-  #hm-right {
+  #engine-left,
+  #engine-right {
     position: relative;
     z-index: 2;
   }
   
-  #hm-left {
+  #engine-left {
     animation: fadeLeft 1.2s ease forwards;
     opacity: 0;
     animation-delay: 0.2s;
   }
   
-  #hm-right {
+  #engine-right {
     animation: fadeRight 1.2s ease forwards;
     opacity: 0;
     animation-delay: 0.2s;
   }
   
-  #auth{
-    height: 10vh;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
+  #auth,
   #trust,
-  #bbb1 {
-    height: 8vh;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  #dmca{
+  #bbb1,
+  #dmca {
     height: 8vh;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -107,25 +97,25 @@
     gap: 2vw;
   }
   
-  #hm-head {
+  #engine-head {
     font-family: var(--bebas);
-    color: #ffff;
+    color: #fff;
     letter-spacing: 0.05vw;
     font-size: 4vh;
   }
   
-  .hm-hd {
+  .engine-hd {
     font-weight: 400;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
   }
   
-  #hm-sb {
-    color: #ffff;
+  #engine-sb {
+    color: #fff;
     font-size: 2.5vh;
     font-weight: 300;
   }
   
-  #cl-btn {
+  #engine-btn {
     font-weight: 300;
     padding: 1vh 1.2vw;
     display: flex;
@@ -144,7 +134,7 @@
     transition: transform 0.3s ease;
   }
   
-  #cl-btn:hover {
+  #engine-btn:hover {
     transform: scale(1.1);
   }
   
@@ -153,88 +143,39 @@
     margin-bottom: 0.2vh;
   }
   
-  .card-row {
-    z-index: 1;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 1.5rem;
-    padding: 2vh 4vw;
-    margin: 0 auto;
-    max-width: 1200px;
-    margin-top: 3vh;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-    top: 78vh;
-  }
-  
-  .card-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border-right: 1px solid rgba(0, 0, 0, 0.4);
-  }
-  .card-wrapper.no-border {
-    border-right: none;
-  }
-
-  /* Tablets (≤ 1024px) */
-@media (max-width: 1024px) {
-    #home {
+  @media (max-width: 1024px) {
+    #engine {
       flex-direction: column;
       height: auto;
       padding: 4vh 4vw;
       gap: 3vh;
     }
   
-    #hm-left,
-    #hm-right {
+    #engine-left,
+    #engine-right {
       width: 100%;
       text-align: center;
     }
   
-    #hm-head {
+    #engine-head {
       font-size: 3.2vh;
     }
   
-    #cl-btn {
+    #engine-btn {
       margin: 2vh auto;
-    }
-  
-    .card-row {
-      position: static;
-      flex-wrap: wrap;
-      padding: 2vh 2vw;
-      margin-top: 2vh;
-      gap: 1rem;
-    }
-  
-    .card-wrapper {
-      border-right: none !important;
-      width: 48%;
-      justify-content: flex-start;
-    }
-  
-    .card-wrapper:nth-child(odd) {
-      border-right: 1px solid rgba(0, 0, 0, 0.2);
     }
   }
   
-  /* Phones (≤ 768px) */
   @media (max-width: 768px) {
-    #home {
+    #engine {
       flex-direction: column;
       height: auto;
       padding: 4vh 4vw;
       gap: 4vh;
     }
   
-    #hm-left,
-    #hm-right {
+    #engine-left,
+    #engine-right {
       width: 100%;
       text-align: center;
     }
@@ -243,37 +184,16 @@
       justify-content: center;
     }
   
-    #hm-head {
+    #engine-head {
       font-size: 3vh;
     }
   
-    #hm-sb {
+    #engine-sb {
       font-size: 2vh;
     }
   
-    #cl-btn {
+    #engine-btn {
       font-size: 2vh;
       margin: 2vh auto;
     }
-  
-    .card-row {
-      position: static;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 1rem;
-      margin-top: 3vh;
-      padding: 2vh 5vw;
-    }
-  
-    .card-wrapper {
-      width: 100%;
-      border-right: none !important;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      padding-bottom: 1rem;
-    }
-  
-    .card-wrapper:last-child {
-      border-bottom: none;
-    }
   }
-  

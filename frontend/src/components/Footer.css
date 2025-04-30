@@ -38,6 +38,7 @@
   
   .footer-section a:hover {
     color: #fbb034;
+    transform: scale(1.05);
   }
   
   .footer-section p {
@@ -59,6 +60,7 @@
   
   .social-icons a:hover {
     color: #fbb034;
+    transform: scale(1.1);
   }
   
   .footer-divider {

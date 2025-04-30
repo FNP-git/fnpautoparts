@@ -1,5 +1,7 @@
 
-  
+  .bbb-section{
+    display: none;
+  }
   @media (max-width: 768px) {
     .bbb-section {
       position: fixed;
@@ -13,7 +15,7 @@
     }
   
     #bbb {
-      height: 10vh;
+      height: 7.5vh;
       cursor: pointer;
     }
   }

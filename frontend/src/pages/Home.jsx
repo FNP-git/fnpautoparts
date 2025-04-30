@@ -1,6 +1,9 @@
 import React from 'react';
 import './Home.css';
-import auth from '../assets/authcert.png';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Bbb from '../components/Bbb';
+import bbb from '../assets/BBB.png';
 import trust from '../assets/Trustpilot.png';
 import blucl from '../assets/blucall.svg';
 import Form from '../components/Form';
@@ -17,18 +20,26 @@ import Brands from './Brands'
 import Testimonials from './Testimonials'
 import Blog from './Blog'
 import Associates from './Associates'
+import dmca from '../assets/dmca.png'
+import Engine from './Engine'
 
 const Home = () => {
   return (
     <>
+    <Navbar />
       <div id="home">
         <div id="hm-left">
           <div id="cert">
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062" target="_blank" rel="noopener noreferrer">
+            <img id='bbb1' src={bbb} alt="bbb accredited" />
+          </a>
+          <a href="https://www.trustpilot.com/review/fnpautoparts.com" target="_blank" rel="noopener noreferrer">
             <img id="trust" src={trust} alt="Trustpilot" />
           </a>
+          <a href="https://www.dmca.com/Protection/Status.aspx?ID=2adc4b2f-3d66-4b9b-9cf1-350789652c71&refurl=https://www.fnpautoparts.com/" target="_blank" rel="noopener noreferrer">
+            <img id="dmca" src={dmca} alt="dmca" />
+          </a>
 
-            <img id='auth' src={auth} alt="bbb accredited" />
           </div>
           <div id="hm-head">
             <h1 className='hm-hd'>RELIABLE USED <span id='ylw'>ENGINES &</span></h1>
@@ -74,6 +85,9 @@ const Home = () => {
       <Testimonials/>
       <Blog/>
       <Associates/>
+      <Bbb />
+      <Engine />
+      <Footer />
     </>
   );
 };

@@ -63,7 +63,7 @@ const Works = () => {
       </div>
 
       {/* Bottom Images */}
-      <div className="works-bottom-images fade-up-works">
+      <div className="works-bottom-images">
         <img src={truckLeft} alt="Truck with packages" className="truck-left" />
         <img src={lineCenter} alt="Connecting line" className="line-center" />
         <img src={houseRight} alt="House delivery" className="house-right" />
