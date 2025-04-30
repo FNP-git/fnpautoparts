@@ -2,7 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import LocomotiveScroll from 'locomotive-scroll';
-import 'locomotive-scroll/dist/locomotive-scroll.css'; // Import its CSS
+import 'locomotive-scroll/dist/locomotive-scroll.css'; 
+import './App.css'; // Import your global CSS
+import Footer from './components/Footer'; // Import the Footer component
 
 const App = () => {
   const containerRef = useRef(null);
@@ -25,11 +27,14 @@ const App = () => {
     };
   }, []);
 
-  return (
-    <div data-scroll-container ref={containerRef}>
+  return (<>
       <Navbar />
+    <div data-scroll-container ref={containerRef}>
       <Home />
+      <Footer />
     </div>
+      </>
+    
   );
 };
 

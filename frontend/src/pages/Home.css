@@ -43,6 +43,13 @@
     align-items: center;
     justify-content: space-around;
   }
+  .AuthorizeNetSeal {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    cursor: pointer;
+  }
+  
   
   #home::before {
     content: '';

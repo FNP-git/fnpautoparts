@@ -13,6 +13,11 @@ import Scams from './Scams'
 import Services from './Services'
 import Works from './Works'
 import Guide from './Guide'
+import Brands from './Brands'
+import Testimonials from './Testimonials'
+import Blog from './Blog'
+import Associates from './Associates'
+import AuthorizeSeal from '../components/AuthorizeSeal'
 
 const Home = () => {
   return (
@@ -22,6 +27,7 @@ const Home = () => {
           <div id="cert">
             <img id='bbb' src={bbb} alt="bbb accredited" />
             <img id='trust' src={trust} alt="trustpilot" />
+            <AuthorizeSeal />
           </div>
           <div id="hm-head">
             <h1 className='hm-hd'>RELIABLE USED <span id='ylw'>ENGINES &</span></h1>
@@ -63,6 +69,10 @@ const Home = () => {
       <Services/>
       <Works/>
       <Guide/>
+      <Brands/>
+      <Testimonials/>
+      <Blog/>
+      <Associates/>
     </>
   );
 };
