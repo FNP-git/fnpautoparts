@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import bbb from '../assets/bbb.png';
+import bbb from '../assets/BBB.png';
 import trust from '../assets/trustpilot.png';
 import blucl from '../assets/blucall.svg';
 import Form from '../components/Form';
