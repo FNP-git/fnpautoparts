@@ -43,12 +43,7 @@
     align-items: center;
     justify-content: space-around;
   }
-  .AuthorizeNetSeal {
-    display: flex;
-    align-items: center;
-    height: 8vh;
-    cursor: pointer;
-  }
+  
   
   
   #home::before {
@@ -80,7 +75,11 @@
     animation-delay: 0.2s;
   }
   
-  #bbb,
+  #auth{
+    height: 10vh;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
   #trust {
     height: 8vh;
     cursor: pointer;

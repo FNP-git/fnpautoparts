@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+import auth from '../assets/authcert.png';
+
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -39,6 +41,12 @@ const Footer = () => {
             <a href="#"><FaLinkedinIn /></a>
             <a href="#"><FaInstagram /></a>
           </div>
+          <div id="authcert">
+  <a href="https://verify.authorize.net/anetseal/?pid=a3a5c06e-7d73-4d8e-bc10-689e99e27bf0&rurl=https://www.fnpautoparts.com" target="_blank" rel="noopener noreferrer">
+    <img id="authc" src={auth} alt="Authorize.net certificate" />
+  </a>
+</div>
+
         </div>
       </div>
 

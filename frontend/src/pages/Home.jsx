@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import bbb from '../assets/BBB.png';
+import auth from '../assets/authcert.png';
 import trust from '../assets/Trustpilot.png';
 import blucl from '../assets/blucall.svg';
 import Form from '../components/Form';
@@ -17,7 +17,6 @@ import Brands from './Brands'
 import Testimonials from './Testimonials'
 import Blog from './Blog'
 import Associates from './Associates'
-import AuthorizeSeal from '../components/AuthorizeSeal'
 
 const Home = () => {
   return (
@@ -25,9 +24,11 @@ const Home = () => {
       <div id="home">
         <div id="hm-left">
           <div id="cert">
-            <img id='bbb' src={bbb} alt="bbb accredited" />
-            <img id='trust' src={trust} alt="trustpilot" />
-            <AuthorizeSeal />
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <img id="trust" src={trust} alt="Trustpilot" />
+          </a>
+
+            <img id='auth' src={auth} alt="bbb accredited" />
           </div>
           <div id="hm-head">
             <h1 className='hm-hd'>RELIABLE USED <span id='ylw'>ENGINES &</span></h1>

@@ -5,6 +5,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css'; 
 import './App.css'; // Import your global CSS
 import Footer from './components/Footer'; // Import the Footer component
+import Bbb from './components/Bbb';
 
 const App = () => {
   const containerRef = useRef(null);
@@ -20,6 +21,9 @@ const App = () => {
         smooth: true
       }
     });
+    setTimeout(() => {
+      scroll.update();
+    }, 1000);
 
     // Cleanup on unmount
     return () => {
@@ -33,6 +37,7 @@ const App = () => {
       <Home />
       <Footer />
     </div>
+      <Bbb />
       </>
     
   );
