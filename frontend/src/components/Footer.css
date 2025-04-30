@@ -4,6 +4,7 @@
     padding: 3vh 5vw;
     font-family: 'Blinker', sans-serif;
     font-size: 0.9rem;
+    min-height: 40vh;
   }
   
   .footer-top {

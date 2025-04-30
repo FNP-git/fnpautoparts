@@ -1,16 +1,20 @@
-.bbb-section {
-    position: fixed;
-    bottom: 2vh;
-    left: 2vw;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: auto; /* allow interaction */
-  }
+
   
-  #bbb {
-    height: 10vh;
-    cursor: pointer;
+  @media (max-width: 768px) {
+    .bbb-section {
+      position: fixed;
+      bottom: 2vh;
+      left: 2vw;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+    }
+  
+    #bbb {
+      height: 10vh;
+      cursor: pointer;
+    }
   }
   
