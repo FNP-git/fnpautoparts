@@ -1,39 +1,39 @@
 /* === ANIMATIONS === */
 @keyframes fadeUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  @keyframes slideInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @keyframes slideInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
   }
-  
-  /* === SCROLL TRIGGER CLASSES === */
-  #services-section .services-cards > .slide-left-on-scroll:nth-child(1).visible,
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* === SCROLL TRIGGER CLASSES === */
+#services-section .services-cards > .slide-left-on-scroll:nth-child(1).visible,
 #services-section .services-cards > .slide-right-on-scroll:nth-child(1).visible {
   animation-delay: 0s;
 }
@@ -63,70 +63,69 @@
   animation-delay: 1.5s;
 }
 
-  /* === SERVICES PAGE STRUCTURE === */
-  #services-section {
-    padding: 8vh 8vw;
-    background-color: #fefefe;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .services-header {
-    text-align: left;
-    margin-bottom: 6vh;
-  }
-  
-  .services-subtitle {
-    color: #f59e0b;
-    font-size: 2.5vmax;
-    text-transform: uppercase;
-    font-family: var(--bebas);
-    margin-bottom: 1vh;
-  }
-  
-  .services-main-title {
-    font-size: 2.4vmax;
-    color: #0d2a53;
-    font-weight: 700;
-    margin-bottom: 2vh;
-  }
-  
-  .services-description {
-    font-size: 1vmax;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  .services-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 6vh;
-  }
-  
-  .services-cards {
-    flex: 1 1 35%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5vh 0vw;
-  }
-  
-  .services-image-area {
-    flex: 1 1 35%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .services-tick-icon {
-    width: 5vmax;
-    margin-bottom: 2vh;
-  }
-  
-  .services-woman-image {
-    width: 90%;
-    max-width: 400px;
-  }
-  
+/* === SERVICES PAGE STRUCTURE === */
+#services-section {
+  padding: 8vh 8vw;
+  background-color: #fefefe;
+  font-family: 'Poppins', sans-serif;
+}
+
+.services-header {
+  text-align: left;
+  margin-bottom: 6vh;
+}
+
+.services-subtitle {
+  color: #f59e0b;
+  font-size: 2.5vmax;
+  text-transform: uppercase;
+  font-family: var(--bebas);
+  margin-bottom: 1vh;
+}
+
+.services-main-title {
+  font-size: 2.4vmax;
+  color: #0d2a53;
+  font-weight: 700;
+  margin-bottom: 2vh;
+}
+
+.services-description {
+  font-size: 1vmax;
+  color: #333;
+  line-height: 1.6;
+}
+
+.services-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 6vh;
+}
+
+.services-cards {
+  flex: 1 1 35%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5vh 0vw;
+}
+
+.services-image-area {
+  flex: 1 1 35%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-tick-icon {
+  width: 5vmax;
+  margin-bottom: 2vh;
+}
+
+.services-woman-image {
+  width: 90%;
+  max-width: 400px;
+}

@@ -7,34 +7,30 @@ import trust from '../assets/Trustpilot.png';
 import blucl from '../assets/blucall.svg';
 import Form from '../components/Form';
 import dmca from '../assets/dmca.png';
+import Navbar from '../components/Navbar';
+import CardItem from '../components/CardItem';
+import EngCheck from './EngCheck';
+import redarw from '../assets/redarw.svg';
 
 const Engine = () => {
   return (
     <>
+      <Navbar />
       <div id="engine">
         <div id="engine-left">
-          <div id="cert">
-            <a href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062" target="_blank" rel="noopener noreferrer">
-              <img id='bbb1' src={bbb} alt="bbb accredited" />
-            </a>
-            <a href="https://www.trustpilot.com/review/fnpautoparts.com" target="_blank" rel="noopener noreferrer">
-              <img id="trust" src={trust} alt="Trustpilot" />
-            </a>
-            <a href="https://www.dmca.com/Protection/Status.aspx?ID=2adc4b2f-3d66-4b9b-9cf1-350789652c71&refurl=https://www.fnpautoparts.com/" target="_blank" rel="noopener noreferrer">
-              <img id="dmca" src={dmca} alt="dmca" />
-            </a>
-          </div>
           <div id="engine-head">
-            <h1 className='engine-hd'>RELIABLE USED <span id='ylw'>ENGINES &</span></h1>
-            <h1 className='engine-hd'><span id='ylw'>TRANSMISSIONS</span> FOR EVERY RIDE</h1>
+            <h1 className="engine-hd">YOUR COMPLETE GUIDE TO BUYING</h1>
+            <h1 className="engine-hd">
+              <span id="ylw">USED ENGINES</span>
+            </h1>
           </div>
           <div id="engine-sub">
-            <h5 id='engine-sb'>Quality-tested second-hand parts delivered with trust.</h5>
+            <h5 id="engine-sb">Compare. Choose. Drive With Confidence.</h5>
           </div>
           <div>
             <button id="engine-btn">
-              <img id='blucl' src={blucl} alt="call a specialist" />
-              TALK TO A SPECIALIST
+              <img id="blucl" src={blucl} alt="call a specialist" />
+              CALL US
             </button>
           </div>
         </div>
@@ -45,6 +41,33 @@ const Engine = () => {
         </div>
       </div>
       <Bbb />
+      <EngCheck />
+      <div id="engine1">
+        <div id="engine-left">
+          <div id="engine-head">
+            <h1 className="engine-hd">
+              <span id="ylw">YOU'RE READY TO BOOK YOUR ENGINE!</span>
+            </h1>
+          </div>
+          <div id="engine-sub">
+            <h5 id="engine-sb">Fill in your details and let us find the perfect engine match - <br />delivered to your door, with compatibility guaranteed.</h5>
+            <h5 id="thr">You're almost there <img id='redarw' src={redarw} alt="" /></h5>
+            
+           
+          </div>
+          <div>
+            <button id="engine-btn">
+              <img id="blucl" src={blucl} alt="call a specialist" />
+              CALL US
+            </button>
+          </div>
+        </div>
+        <div id="engine-right">
+          <div id="frm">
+            <Form />
+          </div>
+        </div>
+      </div>
       <Footer />
     </>
   );

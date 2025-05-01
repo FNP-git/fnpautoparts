@@ -6,65 +6,65 @@ import person1 from '../assets/john.svg';
 
 const testimonials = [
   {
-    text: "Buying a used engine from FNP Autoparts saved me a fortune. The quality was top-notch and perfectly fitted.",
-    name: "John Doe",
+    text: 'Buying a used engine from FNP Autoparts saved me a fortune. The quality was top-notch and perfectly fitted.',
+    name: 'John Doe',
     image: person1,
-    rating: 5
+    rating: 5,
   },
   {
-    text: "Highly impressed by the transmission I bought. Works smooth, no noise, and delivered fast.",
-    name: "Ava Smith",
+    text: 'Highly impressed by the transmission I bought. Works smooth, no noise, and delivered fast.',
+    name: 'Ava Smith',
     image: person1,
-    rating: 4
+    rating: 4,
   },
   {
-    text: "Got a second-hand starter motor. The part was clean, functional, and came with a short warranty. Great deal!",
-    name: "Mohammed Rahim",
+    text: 'Got a second-hand starter motor. The part was clean, functional, and came with a short warranty. Great deal!',
+    name: 'Mohammed Rahim',
     image: person1,
-    rating: 5
+    rating: 5,
   },
   {
-    text: "Found a rare alternator here after weeks of searching. Part was exactly as described and packaged securely.",
-    name: "Sandra Lee",
+    text: 'Found a rare alternator here after weeks of searching. Part was exactly as described and packaged securely.',
+    name: 'Sandra Lee',
     image: person1,
-    rating: 5
+    rating: 5,
   },
   {
-    text: "I bought a used radiator from them. Delivered fast, no leaks, and half the price of new ones!",
-    name: "Carlos Mendes",
+    text: 'I bought a used radiator from them. Delivered fast, no leaks, and half the price of new ones!',
+    name: 'Carlos Mendes',
     image: person1,
-    rating: 4
+    rating: 4,
   },
   {
-    text: "Perfect engine replacement for my SUV. The customer support was very helpful in confirming compatibility.",
-    name: "Priya Kapoor",
+    text: 'Perfect engine replacement for my SUV. The customer support was very helpful in confirming compatibility.',
+    name: 'Priya Kapoor',
     image: person1,
-    rating: 5
+    rating: 5,
   },
   {
-    text: "As a garage owner, I’ve sourced multiple parts from here — never had a complaint from a client yet.",
-    name: "Luke Turner",
+    text: 'As a garage owner, I’ve sourced multiple parts from here — never had a complaint from a client yet.',
+    name: 'Luke Turner',
     image: person1,
-    rating: 5
+    rating: 5,
   },
   {
-    text: "Ordered a complete transmission assembly. Great condition, clean, and shipped with tracking.",
-    name: "Emily Nguyen",
+    text: 'Ordered a complete transmission assembly. Great condition, clean, and shipped with tracking.',
+    name: 'Emily Nguyen',
     image: person1,
-    rating: 4
+    rating: 4,
   },
   {
-    text: "Got a mirror assembly for my car. Fit like OEM and the price was unmatched anywhere online.",
-    name: "Robert Kim",
+    text: 'Got a mirror assembly for my car. Fit like OEM and the price was unmatched anywhere online.',
+    name: 'Robert Kim',
     image: person1,
-    rating: 5
+    rating: 5,
   },
   {
-    text: "Excellent service and genuine parts. You can actually talk to someone who knows about cars!",
-    name: "Fatima Alvi",
+    text: 'Excellent service and genuine parts. You can actually talk to someone who knows about cars!',
+    name: 'Fatima Alvi',
     image: person1,
-    rating: 5
-  }
+    rating: 5,
+  },
 ];
 
 const Testimonials = () => {

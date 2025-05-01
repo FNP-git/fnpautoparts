@@ -1,7 +1,7 @@
 import React from 'react';
 import './GuideCard.css'; // Specific CSS for the card
 
-const GuideCard = ({ title, subtitle, buttonLabel = "Shop", image }) => {
+const GuideCard = ({ title, subtitle, buttonLabel = 'Shop', image }) => {
   return (
     <div className="guide-card">
       <div className="guide-card-content">

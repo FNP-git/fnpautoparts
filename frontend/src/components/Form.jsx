@@ -6,7 +6,7 @@ const Form = () => {
     <div className="form-container">
       <form className="custom-form">
         <h4 className="form-title">Contact info</h4>
-        
+
         <label>Full Name*</label>
         <input type="text" required />
 

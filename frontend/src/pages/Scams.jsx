@@ -12,43 +12,59 @@ const Scams = () => {
   useScrollAnimation(); // Activates scroll animation when elements enter viewport
 
   const redFlags = [
-    "Fake websites with no real contact info.",
-    "Unrealistically cheap prices with no warranty.",
-    "Payments via CashApp / Zelle only.",
-    "No shipping updates or proof of delivery.",
-    "No physical address or Google presence.",
-    "Generic support email addresses."
+    'Fake websites with no real contact info.',
+    'Unrealistically cheap prices with no warranty.',
+    'Payments via CashApp / Zelle only.',
+    'No shipping updates or proof of delivery.',
+    'No physical address or Google presence.',
+    'Generic support email addresses.',
   ];
 
   const trustedBenefits = [
-    "BBB Accredited and A+ Rated.",
-    "Every part backed by a warranty.",
-    "Real customer reviews with photos.",
-    "Verified business address and live support.",
-    "Secure payments with tracking.",
-    "Phone support by real auto experts 24/7."
+    'BBB Accredited and A+ Rated.',
+    'Every part backed by a warranty.',
+    'Real customer reviews with photos.',
+    'Verified business address and live support.',
+    'Secure payments with tracking.',
+    'Phone support by real auto experts 24/7.',
   ];
 
   return (
     <div id="scm">
       <div id="top-part" className="fade-up-on-scroll">
         <h3 className="scam-warning">BEWARE OF AUTO PARTS SCAMS</h3>
-        <h2 className="scam-main-heading">“Don’t Get Scammed. Here’s What To Watch Out For — And How FNP Protects You.”</h2>
+        <h2 className="scam-main-heading">
+          “Don’t Get Scammed. Here’s What To Watch Out For — And How FNP Protects You.”
+        </h2>
         <p className="scam-description">
-          The auto parts industry has seen a rise in fraudulent sellers offering <span className="highlight">“too good to be true”</span> deals on used engines and transmissions.
-          These scammers often disappear after taking your money — with no parts ever shipped.
+          The auto parts industry has seen a rise in fraudulent sellers offering{' '}
+          <span className="highlight">“too good to be true”</span> deals on used engines and
+          transmissions. These scammers often disappear after taking your money — with no parts ever
+          shipped.
         </p>
       </div>
 
       <div className="scam-page">
         <div className="scam-box fade-up-on-scroll">
-          <img src={rightImg} alt="Scam Warning Left" className="slide-left-on-scroll scam-side-img1" />
+          <img
+            src={rightImg}
+            alt="Scam Warning Left"
+            className="slide-left-on-scroll scam-side-img1"
+          />
           <ScamCard icon={scamCross} title="Red Flags to Watch For" points={redFlags} />
         </div>
 
         <div className="scam-box fade-up-on-scroll">
-          <ScamCard icon={scamTick} title="Why You Can Trust FNP Autoparts?" points={trustedBenefits} />
-          <img src={leftImg} alt="Trust Badge Right" className="slide-right-on-scroll scam-side-img2" />
+          <ScamCard
+            icon={scamTick}
+            title="Why You Can Trust FNP Autoparts?"
+            points={trustedBenefits}
+          />
+          <img
+            src={leftImg}
+            alt="Trust Badge Right"
+            className="slide-right-on-scroll scam-side-img2"
+          />
         </div>
       </div>
 

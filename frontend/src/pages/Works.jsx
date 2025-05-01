@@ -55,10 +55,14 @@ const Works = () => {
       <div className="works-footer fade-up-works">
         <h3 className="works-footer-title">Ready to get started?</h3>
         <div className="works-buttons">
-        <a href="tel:+18888079696" className="works-btn call" style={{ textDecoration: 'none', color: 'inherit' }}>
-  📞 Call Us
-</a>
-        <button className="works-btn register">Register</button>
+          <a
+            href="tel:+18888079696"
+            className="works-btn call"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            📞 Call Us
+          </a>
+          <button className="works-btn register">Register</button>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './ServiceCard.css'; 
+import './ServiceCard.css';
 
 const ServiceCard = ({ icon, title, points }) => {
   return (
@@ -11,7 +11,9 @@ const ServiceCard = ({ icon, title, points }) => {
         <h4 className="service-title">{title}</h4>
         <ul className="service-points">
           {points.map((point, index) => (
-            <li key={index} className="service-point">{point}</li>
+            <li key={index} className="service-point">
+              {point}
+            </li>
           ))}
         </ul>
       </div>

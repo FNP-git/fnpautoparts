@@ -39,23 +39,40 @@ import toyota from '../assets/toyota.png';
 import volvo from '../assets/volvo.png';
 
 const brandData = [
-  { name: 'acura', image: acura }, { name: 'alfaromeo', image: alfaromeo },
-  { name: 'audi', image: audi }, { name: 'lexus', image: lexus },
-  { name: 'scion', image: scion }, { name: 'saturn', image: saturn },
-  { name: 'nissan', image: nissan }, { name: 'chrysler', image: chrysler },
-  { name: 'daihatsu', image: daihatsu }, { name: 'datsun', image: datsun },
-  { name: 'deawoo', image: deawoo }, { name: 'dodge', image: dodge },
-  { name: 'ford', image: ford }, { name: 'geo', image: geo },
-  { name: 'gmc', image: gmc }, { name: 'honda', image: honda },
-  { name: 'hummer', image: hummer }, { name: 'hyundai', image: hyundai },
-  { name: 'infinit', image: infinit }, { name: 'jaguar', image: jaguar },
-  { name: 'jeep', image: jeep }, { name: 'kia', image: kia },
-  { name: 'landrover', image: landrover }, { name: 'bmw', image: bmw },
-  { name: 'buick', image: buick }, { name: 'chevy', image: chevy },
-  { name: 'mazda', image: mazda }, { name: 'mercedes', image: mercedes },
-  { name: 'mini', image: mini }, { name: 'mitsubishi', image: mitsubishi },
-  { name: 'porsche', image: porsche }, { name: 'subaru', image: subaru },
-  { name: 'toyota', image: toyota }, { name: 'volvo', image: volvo }
+  { name: 'acura', image: acura },
+  { name: 'alfaromeo', image: alfaromeo },
+  { name: 'audi', image: audi },
+  { name: 'lexus', image: lexus },
+  { name: 'scion', image: scion },
+  { name: 'saturn', image: saturn },
+  { name: 'nissan', image: nissan },
+  { name: 'chrysler', image: chrysler },
+  { name: 'daihatsu', image: daihatsu },
+  { name: 'datsun', image: datsun },
+  { name: 'deawoo', image: deawoo },
+  { name: 'dodge', image: dodge },
+  { name: 'ford', image: ford },
+  { name: 'geo', image: geo },
+  { name: 'gmc', image: gmc },
+  { name: 'honda', image: honda },
+  { name: 'hummer', image: hummer },
+  { name: 'hyundai', image: hyundai },
+  { name: 'infinit', image: infinit },
+  { name: 'jaguar', image: jaguar },
+  { name: 'jeep', image: jeep },
+  { name: 'kia', image: kia },
+  { name: 'landrover', image: landrover },
+  { name: 'bmw', image: bmw },
+  { name: 'buick', image: buick },
+  { name: 'chevy', image: chevy },
+  { name: 'mazda', image: mazda },
+  { name: 'mercedes', image: mercedes },
+  { name: 'mini', image: mini },
+  { name: 'mitsubishi', image: mitsubishi },
+  { name: 'porsche', image: porsche },
+  { name: 'subaru', image: subaru },
+  { name: 'toyota', image: toyota },
+  { name: 'volvo', image: volvo },
 ];
 
 const Brands = () => {
@@ -76,7 +93,6 @@ const Brands = () => {
           {[...topSlider, ...topSlider, ...topSlider].map((brand, i) => (
             <BrandCard key={`top-${i}`} {...brand} />
           ))}
-          
         </div>
       </div>
 

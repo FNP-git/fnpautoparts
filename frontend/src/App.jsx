@@ -8,9 +8,7 @@ import Bbb from './components/Bbb';
 const App = () => {
   return (
     <>
-      
       <Home />
-
     </>
   );
 };

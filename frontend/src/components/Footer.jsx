@@ -36,17 +36,28 @@ const Footer = () => {
         <div className="footer-section social">
           <h4>Social Media :</h4>
           <div className="social-icons">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaXTwitter /></a> 
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaInstagram /></a>
+            <a href="#">
+              <FaFacebookF />
+            </a>
+            <a href="#">
+              <FaXTwitter />
+            </a>
+            <a href="#">
+              <FaLinkedinIn />
+            </a>
+            <a href="#">
+              <FaInstagram />
+            </a>
           </div>
           <div id="authcert">
-  <a href="https://verify.authorize.net/anetseal/?pid=a3a5c06e-7d73-4d8e-bc10-689e99e27bf0&rurl=https://www.fnpautoparts.com" target="_blank" rel="noopener noreferrer">
-    <img id="authc" src={auth} alt="Authorize.net certificate" />
-  </a>
-</div>
-
+            <a
+              href="https://verify.authorize.net/anetseal/?pid=a3a5c06e-7d73-4d8e-bc10-689e99e27bf0&rurl=https://www.fnpautoparts.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img id="authc" src={auth} alt="Authorize.net certificate" />
+            </a>
+          </div>
         </div>
       </div>
 

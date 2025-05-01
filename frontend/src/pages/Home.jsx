@@ -12,45 +12,60 @@ import delivery from '../assets/delivery.svg';
 import payment from '../assets/payment.svg';
 import warranty from '../assets/warranty.svg';
 import support from '../assets/support.svg';
-import Scams from './Scams'
-import Services from './Services'
-import Works from './Works'
-import Guide from './Guide'
-import Brands from './Brands'
-import Testimonials from './Testimonials'
-import Blog from './Blog'
-import Associates from './Associates'
-import dmca from '../assets/dmca.png'
-import Engine from './Engine'
+import Scams from './Scams';
+import Services from './Services';
+import Works from './Works';
+import Guide from './Guide';
+import Brands from './Brands';
+import Testimonials from './Testimonials';
+import Blog from './Blog';
+import Associates from './Associates';
+import dmca from '../assets/dmca.png';
+import Engine from './Engine';
 
 const Home = () => {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div id="home">
         <div id="hm-left">
           <div id="cert">
-          <a href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062" target="_blank" rel="noopener noreferrer">
-            <img id='bbb1' src={bbb} alt="bbb accredited" />
-          </a>
-          <a href="https://www.trustpilot.com/review/fnpautoparts.com" target="_blank" rel="noopener noreferrer">
-            <img id="trust" src={trust} alt="Trustpilot" />
-          </a>
-          <a href="https://www.dmca.com/Protection/Status.aspx?ID=2adc4b2f-3d66-4b9b-9cf1-350789652c71&refurl=https://www.fnpautoparts.com/" target="_blank" rel="noopener noreferrer">
-            <img id="dmca" src={dmca} alt="dmca" />
-          </a>
-
+            <a
+              href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img id="bbb1" src={bbb} alt="bbb accredited" />
+            </a>
+            <a
+              href="https://www.trustpilot.com/review/fnpautoparts.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img id="trust" src={trust} alt="Trustpilot" />
+            </a>
+            <a
+              href="https://www.dmca.com/Protection/Status.aspx?ID=2adc4b2f-3d66-4b9b-9cf1-350789652c71&refurl=https://www.fnpautoparts.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img id="dmca" src={dmca} alt="dmca" />
+            </a>
           </div>
           <div id="hm-head">
-            <h1 className='hm-hd'>RELIABLE USED <span id='ylw'>ENGINES &</span></h1>
-            <h1 className='hm-hd'><span id='ylw'>TRANSMISSIONS</span> FOR EVERY RIDE</h1>
+            <h1 className="hm-hd">
+              RELIABLE USED <span id="ylw">ENGINES &</span>
+            </h1>
+            <h1 className="hm-hd">
+              <span id="ylw">TRANSMISSIONS</span> FOR EVERY RIDE
+            </h1>
           </div>
           <div id="hm-sub">
-            <h5 id='hm-sb'>Quality-tested second-hand parts delivered with trust.</h5>
+            <h5 id="hm-sb">Quality-tested second-hand parts delivered with trust.</h5>
           </div>
           <div>
             <button id="cl-btn">
-              <img id='blucl' src={blucl} alt="call a specialist" />
+              <img id="blucl" src={blucl} alt="call a specialist" />
               TALK TO A SPECIALIST
             </button>
           </div>
@@ -62,29 +77,32 @@ const Home = () => {
         </div>
 
         <div className="card-row">
-  <div className="card-wrapper">
-    <CardItem icon={delivery} title="FREE SHIPPING" subtitle="Nation-wide free shipping" />
-  </div>
-  <div className="card-wrapper">
-    <CardItem icon={payment} title="SECURE PAYMENTS" subtitle="We Accept Cards And Zelle" />
-  </div>
-  <div className="card-wrapper">
-    <CardItem icon={warranty} title="90 DAY WARRANTY" subtitle="All Of Our Products Are Covered" />
-  </div>
-  <div className="card-wrapper no-border">
-    <CardItem icon={support} title="24/7 HOURS SUPPORT" subtitle="Call Us :+1-8888079696" />
-  </div>
-</div>
-
+          <div className="card-wrapper">
+            <CardItem icon={delivery} title="FREE SHIPPING" subtitle="Nation-wide free shipping" />
+          </div>
+          <div className="card-wrapper">
+            <CardItem icon={payment} title="SECURE PAYMENTS" subtitle="We Accept Cards And Zelle" />
+          </div>
+          <div className="card-wrapper">
+            <CardItem
+              icon={warranty}
+              title="90 DAY WARRANTY"
+              subtitle="All Of Our Products Are Covered"
+            />
+          </div>
+          <div className="card-wrapper no-border">
+            <CardItem icon={support} title="24/7 HOURS SUPPORT" subtitle="Call Us :+1-8888079696" />
+          </div>
+        </div>
       </div>
-      <Scams/>
-      <Services/>
-      <Works/>
-      <Guide/>
-      <Brands/>
-      <Testimonials/>
-      <Blog/>
-      <Associates/>
+      <Scams />
+      <Services />
+      <Works />
+      <Guide />
+      <Brands />
+      <Testimonials />
+      <Blog />
+      <Associates />
       <Bbb />
       <Engine />
       <Footer />
