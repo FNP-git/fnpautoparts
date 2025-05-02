@@ -53,6 +53,7 @@ body {
   color: #000; /* default color */
   transition: color 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .mnu::after {

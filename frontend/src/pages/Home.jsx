@@ -21,7 +21,7 @@ import Testimonials from './Testimonials';
 import Blog from './Blog';
 import Associates from './Associates';
 import dmca from '../assets/dmca.png';
-import Engine from './Engine';
+
 
 const Home = () => {
   return (
@@ -104,7 +104,6 @@ const Home = () => {
       <Blog />
       <Associates />
       <Bbb />
-      <Engine />
       <Footer />
     </>
   );

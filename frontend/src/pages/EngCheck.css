@@ -95,7 +95,9 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fbbf24;
-  font-weight: 700;
+  font-family: var(--bebas), sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
   font-size: 1.8rem;
 }
 .badge-images a img {

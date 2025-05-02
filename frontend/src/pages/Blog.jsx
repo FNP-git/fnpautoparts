@@ -4,6 +4,9 @@ import BlogCard from '../components/BlogCard';
 import useWorksAnimation from '../hooks/useWorksAnimation'; // adjust the path as needed
 import blg1 from '../assets/blg1.svg';
 import blg2 from '../assets/blg2.svg';
+import Navbar from '../components/Navbar';
+import Bbb from '../components/Bbb';
+import Footer from '../components/Footer';
 
 const blogData = [
   {
@@ -38,6 +41,7 @@ const Blog = () => {
   };
 
   return (
+    <>
     <section className="blog-section">
       <h2 className="blog-heading slide-left-works">BLOGS & POSTS</h2>
       <h2 className="subhead fade-up-works">
@@ -55,6 +59,7 @@ const Blog = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 

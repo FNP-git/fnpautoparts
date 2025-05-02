@@ -1,6 +1,8 @@
 import React from 'react';
 import './EngCheck.css';
 import arrowIcon from '../assets/arrow-down.svg';
+import ConfidenceBadges from '../components/ConfidenceBadges';
+
 
 import starIcon from '../assets/star.png';
 import bbbBadge from '../assets/bbb-badge.png';
@@ -60,63 +62,7 @@ const checklistItems = [
 const EngCheck = () => {
   return (
     <div className="eng-check-container">
-      <section className="confidence-section">
-        <div id="conf-left">
-          <h3 className="highlight-text">BUY WITH CONFIDENCE</h3>
-          <h2 className="badges-heading">Badges We Proudly Present</h2>
-          <ul className="badges-list">
-            <li>
-              <img src={starIcon} alt="Star" /> BBB Accredited Business
-            </li>
-            <li>
-              <img src={starIcon} alt="Star" /> Rated Excellent on Trustpilot
-            </li>
-            <li>
-              <img src={starIcon} alt="Star" /> DMCA Verified
-            </li>
-            <li>
-              <img src={starIcon} alt="Star" /> Authorize.net Verified
-            </li>
-          </ul>
-        </div>
-
-        <div id="conf-right">
-          <div className="badge-images">
-            <div id="flx1">
-              <a
-                href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={bbbBadge} alt="BBB Badge" />
-              </a>
-              <a
-                href="https://www.trustpilot.com/review/fnpautoparts.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={trustpilotBadge} alt="Trustpilot Badge" />
-              </a>
-            </div>
-            <div id="flx1">
-              <a
-                href="https://www.dmca.com/Protection/Status.aspx?ID=2adc4b2f-3d66-4b9b-9cf1-350789652c71&refurl=https://www.fnpautoparts.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={dmca} alt="DMCA Badge" />
-              </a>
-              <a
-                href="https://verify.authorize.net/anetseal/?pid=a3a5c06e-7d73-4d8e-bc10-689e99e27bf0&rurl=https://www.fnpautoparts.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={authcert} alt="Authorize.net" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ConfidenceBadges />
 
       <section
         className="engine-check-image"

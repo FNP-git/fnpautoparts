@@ -17,7 +17,7 @@ const BlogCard = ({ image, title, description, onClick }) => {
     description.length > 120 ? description.slice(0, 120) + '...' : description;
 
   return (
-    <div className="blog-card fade-up-works" onClick={onClick}>
+    <div className="blog-card" onClick={onClick}>
       <div className="blog-img" style={{ backgroundImage: `url(${image})` }}></div>
       <h3 className="blog-title">{title}</h3>
       <p className="blog-desc">{trimmedDescription}</p>
