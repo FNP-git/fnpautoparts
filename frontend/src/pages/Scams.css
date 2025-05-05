@@ -148,3 +148,60 @@
   color: #f55353;
   font-weight: 600;
 }
+@media (max-width: 1024px) {
+.scam-page{
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.scam-side-img2 {
+  height: auto;
+  max-width: 22vmax;
+  position: absolute;
+  right: -8vw;
+  bottom: -2vh;
+}
+}
+@media (max-width: 600px) {
+  #scm {
+    margin-top: 5vh;}
+  .scam-warning {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  
+  .scam-main-heading {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  
+  .scam-description {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .scam-side-img1 {
+    height: auto;
+    max-width: 22vmax;
+    position: absolute;
+    left: -14vw;
+    bottom: 2vh;
+  }
+  .scam-page {
+    padding: 0vh 4vw;
+  }
+  #scm {
+    padding: 5vh 4vw;
+  }
+}
+@media (max-width: 492px) {
+  
+  
+  .scam-side-img1{
+    display: none;
+  }
+  .scam-side-img2{
+    display: none;
+  }
+}

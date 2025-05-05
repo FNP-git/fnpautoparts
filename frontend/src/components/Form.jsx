@@ -13,7 +13,7 @@ const Form = () => {
         <label>Phone No.*</label>
         <input type="text" required />
 
-        <div className="form-row">
+        <div className="form-row email-zip-row">
           <div className="form-col">
             <label>Email*</label>
             <input type="email" required />
@@ -26,7 +26,7 @@ const Form = () => {
 
         <h4 className="form-title">Part Details</h4>
 
-        <div className="form-row">
+        <div className="form-row part-details-row">
           <div className="form-col">
             <label>Year*</label>
             <input type="text" required />

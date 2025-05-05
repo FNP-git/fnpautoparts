@@ -4,7 +4,7 @@
   border-radius: 15px;
   border: 1px solid #feb139;
   color: #fff;
-  width: 28vw;
+  width: 30vw;
   font-family: 'Poppins', sans-serif;
   backdrop-filter: blur(10px);
 }
@@ -27,6 +27,7 @@
   font-weight: 400;
   color: #fff;
   margin-bottom: 0.2vh;
+  text-align: left;
 }
 
 .custom-form input {
@@ -69,4 +70,48 @@
   background-color: #000;
   color: #feb139;
   border: 1px solid #feb139;
+}
+/* Tablets and smaller laptops (width <= 1024px) */
+@media screen and (max-width: 1024px) {
+  .form-container {
+    width: 70vw;
+    padding: 2vh 3vw;
+  }
+  #cert{
+    margin-top: 5vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Medium devices like tablets (width <= 768px) */
+/* All form rows stack except specific ones */
+
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 80vw;
+    padding: 3vh 5vw;
+  }
+
+  /* Same logic for phones */
+  .form-row {
+    flex-direction: column;
+  }
+
+  .email-zip-row,
+  .part-details-row {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    gap: 1vw;
+  }
+
+  .email-zip-row .form-col,
+  .part-details-row .form-col {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 425px) {
+  .form-container {
+    width: 95vw;}
 }

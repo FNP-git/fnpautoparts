@@ -41,3 +41,20 @@
   color: #222;
   line-height: 1.6;
 }
+@media (max-width: 1024px) {
+.scam-card{
+  max-width: 100%;
+  padding: 1.5rem 5rem;
+}
+}
+@media (max-width: 600px) {
+  .scam-card{
+    max-width: 100%;
+    padding: 1.5rem 2.5rem;
+  }
+}
+@media (max-width: 492px) {
+  .scam-card{
+    padding: 1.5rem 0.7rem;
+  }
+}
