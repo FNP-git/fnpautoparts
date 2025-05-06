@@ -28,3 +28,30 @@
   flex-wrap: wrap;
   gap: 4vw;
 }
+@media (max-width: 768px) {
+  .guide-subtitle {
+    font-size: 4vmax;
+  }
+
+  .guide-main-title {
+    font-size: 2.8vmax;
+  }
+
+  .guide-cards-wrapper {
+    gap: 5vw;
+  }
+}
+@media (max-width: 600px) {
+  
+.guide-subtitle {
+  font-size: 5vmax;
+}
+
+.guide-main-title {
+  font-size: 3vmax;
+}
+
+.guide-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+}}

@@ -9,6 +9,7 @@ import BlogCard from '../components/BlogCard';
 
 import blg1 from '../assets/blg1.svg';
 import blg2 from '../assets/blg2.svg';
+import HamburgerMenu from '../components/HamburgerMenu';
 
 const blogData = [
   {
@@ -59,6 +60,7 @@ const BlogSection = () => {
   return (
     <>
       <Navbar />
+      <HamburgerMenu />
       <div className="blg-sectionn">
         <div className="blog-overlay">
           <div className="blog-content">

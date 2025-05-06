@@ -11,11 +11,13 @@ import Navbar from '../components/Navbar';
 import CardItem from '../components/CardItem';
 import EngCheck from './EngCheck';
 import redarw from '../assets/redarw.svg';
+import HamburgerMenu from '../components/HamburgerMenu';
 
 const Engine = () => {
   return (
     <>
       <Navbar />
+      <HamburgerMenu />
       <div id="engine">
         <div id="engine-left">
           <div id="engine-head">

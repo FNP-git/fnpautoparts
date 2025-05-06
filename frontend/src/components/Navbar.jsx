@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
+    <>
     <div className="nav">
-      <div id="lgo">
+      <div>
         <Link to="/">
-          <img src={logo} alt="fnp autopart logo" />
+          <img  id="lgo" src={logo} alt="fnp autopart logo" />
         </Link>
       </div>
 
@@ -31,6 +32,7 @@ const Navbar = () => {
         </a>
       </div>
     </div>
+    </>
   );
 };
 

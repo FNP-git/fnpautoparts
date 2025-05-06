@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import Bbb from '../components/Bbb';
 import bbb from '../assets/BBB.png';
 import trust from '../assets/Trustpilot.png';
-import blucl from '../assets/blucall.svg';
+import blucl from '../assets/phn-yellow.svg';
 import Form from '../components/Form';
 import CardItem from '../components/CardItem';
 import delivery from '../assets/delivery.svg';
@@ -21,13 +21,19 @@ import Testimonials from './Testimonials';
 import Blog from './Blog';
 import Associates from './Associates';
 import dmca from '../assets/dmca.png';
+import CardRowMobile from '../components/CardRowMobile';
+import HamburgerMenu from '../components/HamburgerMenu';
+
+
 
 
 const Home = () => {
   return (
     <>
       <Navbar />
+      <HamburgerMenu />
       <div id="home">
+        <div id="hm-main">
         <div id="hm-left">
           <div id="cert">
             <a
@@ -75,14 +81,9 @@ const Home = () => {
             <Form />
           </div>
         </div>
-
+        </div>
         <div className="card-row">
-          <div className="card-wrapper">
-            <CardItem icon={delivery} title="FREE SHIPPING" subtitle="Nation-wide free shipping" />
-          </div>
-          <div className="card-wrapper">
-            <CardItem icon={payment} title="SECURE PAYMENTS" subtitle="We Accept Cards And Zelle" />
-          </div>
+          <div id="cplr">
           <div className="card-wrapper">
             <CardItem
               icon={warranty}
@@ -90,11 +91,23 @@ const Home = () => {
               subtitle="All Of Our Products Are Covered"
             />
           </div>
+          <div className="card-wrapper">
+            <CardItem icon={support} title="24/7 SUPPORT" subtitle="Call Us:+1-8888079696" />
+          </div>
+          
+          </div>
+          <div id="cplr">
+          <div className="card-wrapper">
+            <CardItem icon={delivery} title="FREE SHIPPING" subtitle="Nation-wide free shipping" />
+          </div>
           <div className="card-wrapper no-border">
-            <CardItem icon={support} title="24/7 HOURS SUPPORT" subtitle="Call Us :+1-8888079696" />
+            <CardItem icon={payment} title="SECURE PAYMENTS" subtitle="We Accept Cards And Zelle" />
+          </div>
           </div>
         </div>
       </div>
+        <CardRowMobile />
+     
       <Scams />
       <Services />
       <Works />

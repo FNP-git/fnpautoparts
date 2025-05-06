@@ -12,7 +12,7 @@ import bbbBadge from '../assets/BBB.png';
 import trustpilotBadge from '../assets/trustpilot.png';
 import authcert from '../assets/authcert.png';
 import dmca from '../assets/dmca.png';
-
+import HamburgerMenu from '../components/HamburgerMenu';
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa6';
 
 import Form from '../components/Form';
@@ -21,6 +21,7 @@ const Contact = () => {
   return (
   <>
     <Navbar />
+    <HamburgerMenu />
     <div className="contact-section">
       <div className="contact-overlay">
         <div className="contact-text">

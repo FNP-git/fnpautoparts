@@ -75,6 +75,19 @@
 
 @media (max-width: 768px) {
   .blog-card {
+    width: 40vw;
+  }
+
+  .blog-img {
+    height: 40vw;
+  }
+
+  .blog-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 490px) {
+  .blog-card {
     width: 80vw;
   }
 
@@ -86,3 +99,4 @@
     font-size: 2rem;
   }
 }
+

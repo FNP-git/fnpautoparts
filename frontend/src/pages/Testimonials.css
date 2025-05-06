@@ -82,3 +82,22 @@
 .testimonial-nav button:hover {
   transform: scale(1.1);
 }
+@media (max-width: 690px) {
+  .testimonials-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .testimonial-title {
+    font-size: 3.5vmax;
+    width: 100%;
+  }
+  .testimonials-left {
+    max-width: 90vw !important;
+  }
+  .testimonials-right {
+    max-width: 90vw !important;
+  }
+  .testimonial-subtitle{
+    font-size: 4.5vmax;
+  }
+}

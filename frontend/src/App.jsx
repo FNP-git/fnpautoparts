@@ -1,10 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Bbb from './components/Bbb';
-
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -15,6 +12,7 @@ import Transmission from './pages/Transmission';
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/engine" element={<Engine />} />

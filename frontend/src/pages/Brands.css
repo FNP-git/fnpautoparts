@@ -48,8 +48,9 @@
 }
 
 @media (max-width: 768px) {
+  
   .brands-title {
-    font-size: 1.4rem;
+    font-size: 4vmax;
   }
 
   .brand-card {

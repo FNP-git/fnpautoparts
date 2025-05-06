@@ -98,6 +98,7 @@
 
 .services-content {
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
@@ -128,4 +129,62 @@
 .services-woman-image {
   width: 90%;
   max-width: 400px;
+}
+@media (max-width: 768px) {
+  .services-content {
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+    align-items: center;
+    gap: 5vh;
+  }
+  .services-woman-image {
+    width: 70%;
+    max-width: 400px;
+  }
+  .services-cards {
+    gap: 5vh 2vw;
+  }
+  .services-header {
+    font-size: 4vh;
+  }
+  
+  .services-subtitle {
+    font-size: 4.5vmax;
+    letter-spacing: 0.6px;
+  }
+  
+  .services-main-title {
+    font-size: 3vmax;
+  }
+  
+  .services-description {
+    font-size: 1.7vmax;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 470px) {
+  .services-cards {
+    flex: 1 1 35%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3vh 0vw;
+  }
+  .services-cards {
+    gap: 5vh 2vw;
+  }
+  
+  .services-subtitle {
+    font-size: 5vmax;
+    letter-spacing: 0.6px;
+  }
+  
+  .services-main-title {
+    font-size: 3.3vmax;
+  }
+  
+  .services-description {
+    font-size: 2vmax;
+    line-height: 1.3;
+  }
 }

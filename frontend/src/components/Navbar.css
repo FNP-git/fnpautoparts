@@ -14,8 +14,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,8 +37,7 @@ body {
   }
 }
 
-#menu {
-  gap: 10%;
+#menu {  gap: 4vw;
   font-family: var(--bebas);
   display: flex;
   letter-spacing: 0.02vw;
@@ -68,7 +67,9 @@ body {
   transform-origin: left;
   transition: transform 0.3s ease;
 }
-
+#lgo{
+  width: 12vw;
+}
 .mnu:hover {
   color: #f55353;
 }
@@ -90,7 +91,7 @@ body {
   background-color: #f55353;
   letter-spacing: 0.08vw;
   gap: 0.1vw;
-  font-size: 2.1vh;
+  font-size: 1.25vw;
 }
 
 #phn {
@@ -99,4 +100,14 @@ body {
 #nav-btn:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .mnu{
+    font-size: 1.6vw;
+  }
+}
+@media (max-width: 491px) {
+  .nav{
+    display: none;
+  };
 }

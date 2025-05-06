@@ -13,12 +13,14 @@ import blucl from '../assets/blucall.svg';
 import Form from '../components/Form';
 import Footer from '../components/Footer';
 import Bbb from '../components/Bbb';
+import HamburgerMenu from '../components/HamburgerMenu';
 
 
 const About = () => {
   return (
     <>
     <Navbar />
+    <HamburgerMenu />
     <section className="about-section">
       <div className="about-overlay">
         <div className="about-content">

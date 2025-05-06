@@ -136,6 +136,11 @@
   right: -4vw;
   bottom: -2vh;
 }
+.scam-highlight-phone {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
 
 /* Footer */
 .scam-footer {
@@ -148,6 +153,14 @@
   color: #f55353;
   font-weight: 600;
 }
+@media (max-width: 1390px) {
+  .scam-side-img1 {
+    left: -11vw;
+    bottom: 0vh;
+  }
+  .scam-side-img2 {
+    right: -8vw;
+  }}
 @media (max-width: 1024px) {
 .scam-page{
   margin-top: 15vh;
@@ -155,6 +168,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.scam-side-img1 {
+  height: auto;
+  max-width: 22vmax;
+  position: absolute;
+  left: -14vw;
+  bottom: -1.5vh;
 }
 .scam-side-img2 {
   height: auto;
@@ -169,16 +189,16 @@
     margin-top: 5vh;}
   .scam-warning {
     font-size: 1.7rem;
-    text-align: center;
+    text-align: left;
   }
   
   .scam-main-heading {
     font-size: 1.7rem;
-    text-align: center;
+    text-align: left;
   }
   
   .scam-description {
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
   }
   .scam-side-img1 {

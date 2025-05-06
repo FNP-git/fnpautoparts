@@ -34,18 +34,22 @@ body {
 
 #home {
   position: relative;
-  height: 90vh;
+  min-height: 90vh;
   background-image: url('/hmbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* ✅ makes card-row appear below hm-main */
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
+
 #home::before {
+  
+  display: flex;
+  flex-direction: column;
   content: '';
   position: absolute;
   top: 0;
@@ -53,13 +57,13 @@ body {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
+  z-index: 0;
 }
 
 #hm-left,
 #hm-right {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 #hm-left {
@@ -69,6 +73,10 @@ body {
 }
 
 #hm-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   animation: fadeRight 1.2s ease forwards;
   opacity: 0;
   animation-delay: 0.2s;
@@ -85,6 +93,7 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
 #dmca {
   height: 8vh;
   cursor: pointer;
@@ -132,9 +141,9 @@ body {
   justify-content: center;
   font-family: var(--bebas);
   border-radius: 9px;
-  color: #143f6b;
+  color: #f6f54d;
   border: none;
-  background-color: #feb139;
+  background-color: #f55353;
   letter-spacing: 0.05vw;
   gap: 0.4vw;
   font-size: 2.4vh;
@@ -153,8 +162,7 @@ body {
 }
 
 .card-row {
-  z-index: 1;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -162,13 +170,25 @@ body {
   padding: 2vh 4vw;
   margin: 0 auto;
   max-width: 1200px;
-  margin-top: 3vh;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-  top: 78vh;
+  bottom: -7vh;
+}
+#hm-main {
+  position: relative;
+  display: flex;
+  flex-direction: row; /* ✅ correct */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4vh 4vw;
 }
 
+#cplr{
+  display: flex;
+  flex-direction: row;
+}
 .card-wrapper {
   flex: 1;
   display: flex;
@@ -185,8 +205,9 @@ body {
 @media (max-width: 1024px) {
   #home {
     flex-direction: column;
-    height: auto;
+    height: 150vh;
     padding: 4vh 4vw;
+    padding-top: 0vh;
     gap: 3vh;
   }
   #frm{
@@ -200,6 +221,12 @@ body {
     width: 100%;
     text-align: center;
   }
+  #hm-main {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 4vh;
+  }
+  
 
   #hm-head {
     font-size: 3.2vh;
@@ -210,10 +237,10 @@ body {
   }
 
   .card-row {
-    position: static;
+    position: absolute;
     flex-wrap: wrap;
     padding: 2vh 2vw;
-    margin-top: 2vh;
+    margin-top: 40vh;
     gap: 1rem;
   }
 
@@ -232,21 +259,23 @@ body {
 @media (max-width: 768px) {
   #home {
     flex-direction: column;
-    height: auto;
     padding: 4vh 4vw;
     gap: 4vh;
   }
-
-  #hm-left,
-  #hm-right {
-    width: 100%;
-    text-align: center;
-  }
-
   #cert {
     justify-content: center;
   }
-
+  #cplr{
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+  }
+  .card-row{
+    bottom: -15vh;
+    width: 55vw;
+    justify-content: space-around;
+    align-items: stretch;
+  }
   #hm-head {
     font-size: 3vh;
   }
@@ -260,20 +289,11 @@ body {
     margin: 2vh auto;
   }
 
-  .card-row {
-    position: static;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-    margin-top: 3vh;
-    padding: 2vh 5vw;
-  }
 
   .card-wrapper {
     width: 100%;
     border-right: none !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 1rem;
   }
 
   .card-wrapper:last-child {
@@ -282,4 +302,50 @@ body {
   #bbb1 {
     display: none;
   }
+}
+
+@media (max-width: 920px) {
+#cplr{
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.card-row{
+  bottom: -15vh;
+  width: 55vw;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+}
+@media (max-width: 750px) {
+.card-row{
+  flex-direction: column;
+  width: 35vw;
+}
+.card-wrapper {
+  justify-content: flex-start;
+}
+}
+@media (max-width: 750px) {
+  .card-row{
+display: none;  }
+ 
+  }
+
+  @media (max-width: 480px) {
+ #home{
+  
+  height: 13         0vh;
+ }
+  #trust,
+#bbb1 {
+  width: 50vw;
+  object-fit: contain;
+}
+#cl-btn {
+  padding: 1vh 4vw;
+  letter-spacing: 0.05vw;
+  gap: 1vw;
+}
 }

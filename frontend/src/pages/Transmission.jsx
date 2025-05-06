@@ -11,11 +11,13 @@ import Navbar from '../components/Navbar';
 import CardItem from '../components/CardItem';
 import TransCheck from './TransCheck';
 import redarw from '../assets/redarw.svg';
+import HamburgerMenu from '../components/HamburgerMenu';
 
 const Transmission = () => {
   return (
     <>
       <Navbar />
+      <HamburgerMenu />
       <div id="transmission">
         <div id="transmission-left">
           <div id="transmission-head">

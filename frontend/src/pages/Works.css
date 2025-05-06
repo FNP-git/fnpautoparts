@@ -196,3 +196,14 @@
   bottom: -2vh;
   width: 18vmax;
 }
+@media (max-width: 470px) {
+  .works-subtitle {
+    font-size: 5vmax;
+  }
+  .works-main-title {
+    font-size: 3vmax;
+  }
+  .works-bottom-images{
+    display: none;
+  }
+}

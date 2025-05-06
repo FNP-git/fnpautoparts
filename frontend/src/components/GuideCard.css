@@ -72,3 +72,48 @@
 .guide-card-button:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 600px) {
+  .guide-card {
+    flex-direction: column-reverse;
+    padding: 1vh 3vw;
+    width: 65vw;
+    height: 36vh;
+  }
+  .guide-card-content {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .guide-card-title {
+    font-size: 4vmax;
+    margin-bottom: 0vh;
+  }
+  
+  .guide-card-subtitle {
+    font-size: 2vmax;
+    margin-bottom: 1vh;
+  }
+  
+  .guide-card-button {
+    width: 35vw;
+    font-size: 2vmax;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .guide-card-image-container {
+    flex: 1;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .guide-card-image {
+    width: 40vw;
+    max-width: 20vmax;
+    transition: transform 0.4s ease;
+    z-index: 2;
+  }
+}

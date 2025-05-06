@@ -29,6 +29,15 @@ const Services = () => {
       </div>
 
       <div className="services-content">
+         {/* Woman image sliding from left */}
+         <div className="slide-left-on-scroll services-image-area">
+          <img
+            src={womanImage}
+            alt="Woman holding a package"
+            className="services-woman-image"
+            loading="lazy"
+          />
+        </div>
         <div className="services-cards">
           {/* Alternating slide animations */}
           <div className="slide-left-on-scroll">
@@ -99,15 +108,7 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Woman image sliding from left */}
-        <div className="slide-left-on-scroll services-image-area">
-          <img
-            src={womanImage}
-            alt="Woman holding a package"
-            className="services-woman-image"
-            loading="lazy"
-          />
-        </div>
+       
       </div>
     </div>
   );
