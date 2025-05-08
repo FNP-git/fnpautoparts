@@ -28,6 +28,7 @@
   flex-wrap: wrap;
   gap: 4vw;
 }
+
 @media (max-width: 768px) {
   .guide-subtitle {
     font-size: 4vmax;

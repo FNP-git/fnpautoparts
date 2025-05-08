@@ -107,7 +107,7 @@ const TransCheck = () => {
       </section>
       <div id="compat">
       <h3 className="highlight-text">TRANSMISSION CODE AND COMPATIBILITY</h3>
-      <h2 className="badges-heading">Transmission Compatibility Isn't Just Plug-And-Play. The Transmission Codr Ensures A Perfect Fit</h2>
+      <h2 className="transub-heading">Transmission Compatibility Isn't Just Plug-And-Play. The Transmission Codr Ensures A Perfect Fit</h2>
         <div id='trans-main'>
             <div id="compat-left">
             <img id="trns" src={Transmission} alt="Transmission image" />
@@ -136,8 +136,11 @@ const TransCheck = () => {
           Or
         </h3>
         <div id="cldv">
-          <button id="clbtn">Book a Call</button>
-        </div>
+  <a href="tel:+18888079696" style={{ textDecoration: 'none' }}>
+    <button id="clbtn">Book a Call</button>
+  </a>
+</div>
+
         <div id="choose-us">
           <h3 className="highlight-text">WHY CHOOSE US FOR YOUR TRANSMISSION NEEDS</h3>
           <div id="points">

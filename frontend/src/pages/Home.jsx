@@ -70,10 +70,13 @@ const Home = () => {
             <h5 id="hm-sb">Quality-tested second-hand parts delivered with trust.</h5>
           </div>
           <div>
-            <button id="cl-btn">
-              <img id="blucl" src={blucl} alt="call a specialist" />
-              TALK TO A SPECIALIST
-            </button>
+          <a href="tel:+18888079696" style={{ textDecoration: 'none' }}>
+  <button id="cl-btn">
+    <img id="blucl" src={blucl} alt="call a specialist" />
+    TALK TO A SPECIALIST
+  </button>
+</a>
+
           </div>
         </div>
         <div id="hm-right">

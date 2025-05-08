@@ -52,7 +52,7 @@ const Transmission = () => {
             </h1>
           </div>
           <div id="transmission-sub">
-            <h5 id="transmission-sb">Fill in your details and let us find the perfect transmission match - <br />delivered to your door, with compatibility guaranteed.</h5>
+            <h5 id="transmission-sbh">Fill in your details and let us find the perfect transmission match - <br />delivered to your door, with compatibility guaranteed.</h5>
             <h5 id="thr">You're almost there <img id='redarw' src={redarw} alt="" /></h5>
           </div>
           <div>

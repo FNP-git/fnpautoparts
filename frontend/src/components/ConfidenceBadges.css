@@ -1,4 +1,4 @@
-.confidence-section {
+.conf-section {
     padding-left: 7vw;
     display: flex;
     justify-content: space-around;
@@ -11,7 +11,7 @@
     flex: 1;
   }
   
-  .highlight-text {
+  .high-text {
     color: #f59e0b;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
@@ -27,13 +27,13 @@
     font-weight: 600;
   }
   
-  .badges-list {
+  .badges-lt {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  .badges-list li {
+  .badges-lt li {
     display: flex;
     align-items: center;
     font-size: 1.3rem;
@@ -41,7 +41,7 @@
     font-family: 'Blinker';
   }
   
-  .badges-list img {
+  .badges-lt img {
     width: 20px;
     height: 20px;
     margin-right: 0.5rem;
@@ -75,11 +75,47 @@
     align-items: center;
     gap: 3rem;
   }
+
   
-  @media screen and (max-width: 768px) {
-    .badge-images {
-      flex-direction: column;
-      align-items: flex-start;
+  @media screen and (max-width: 890px) {
+    .high-text {
+      font-size: 7vh;
+      text-wrap: nowrap;
+    }
+    .confidence-section {
+      padding-left: 0vw;
+    }
+    .badges-lt{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+        .conf-section {
+    display: flex;
+    flex-direction: column; 
+    gap: 5vh;   }
+    #conf-icon{
+      width: 22vh;
+    }
+    #conf-trust{
+      width: 29vh;
+    }
+    .badges-heading{
+      font-size: 7vh;
+      text-wrap: wrap;
+    }
+   
+  }
+  @media screen and (max-width: 490px) {
+    
+    .badges-heading{
+      text-wrap: wrap;
+    }
+   
+  }
+  @media screen and (max-width: 375px) {
+    .badges-lt img {
+      margin-right: 0rem;
     }
   }
-  

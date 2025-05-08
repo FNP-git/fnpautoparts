@@ -1,15 +1,16 @@
 import React from 'react';
 import WorkCard from '../components/WorkCard';
 import './Works.css';
-
+import { useNavigate } from 'react-router-dom';
 import truckLeft from '../assets/truck-left.svg';
 import lineCenter from '../assets/line-center.svg';
 import houseRight from '../assets/house-right.svg';
 import useWorksAnimation from '../hooks/useWorksAnimation'; // custom hook
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Works = () => {
   useWorksAnimation(); // initialize animations
-
+  const navigate = useNavigate();
   return (
     <div id="works-section">
       <div className="works-header fade-up-works">
@@ -62,7 +63,10 @@ const Works = () => {
           >
             📞 Call Us
           </a>
-          <button className="works-btn register">Register</button>
+          <Link to="/contact">
+  <button className="works-btn register">Register</button>
+</Link>
+
         </div>
       </div>
 

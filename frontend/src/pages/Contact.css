@@ -180,6 +180,9 @@
       }
     
       .contact-form-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
       }
     .contact-title {
@@ -194,4 +197,10 @@
       font-size: 0.95rem;
     }
   }
+  @media screen and (max-width: 340px) {
+
+  .contact-form-wrapper {
+    padding: 4rem 0vw;
   
+  }
+}

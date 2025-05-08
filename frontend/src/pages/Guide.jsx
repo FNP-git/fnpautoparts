@@ -1,7 +1,7 @@
 import React from 'react';
 import GuideCard from '../components/GuideCard';
 import './Guide.css'; // Page-specific styling
-
+import { Link } from 'react-router-dom';
 import usedEngineImage from '../assets/usedEngineImage.svg';
 import usedTransmissionImage from '../assets/usedTransmissionImage.svg';
 import useScrollAnimation from '../hooks/useScrollAnimation'; // ✅ Import the scroll hook
@@ -17,12 +17,14 @@ const Guide = () => {
       </h2>
 
       <div className="guide-cards-wrapper fade-up-on-scroll">
-        <GuideCard title="USED ENGINES" subtitle="Premium Performance" image={usedEngineImage} />
+      <Link to="/engine" style={{ textDecoration: 'none' }}>
+        <GuideCard title="USED ENGINES" subtitle="Premium Performance" image={usedEngineImage} /></Link>
+        <Link to="/transmission" style={{ textDecoration: 'none' }}>
         <GuideCard
           title="USED TRANSMISSIONS"
           subtitle="Seamless Power Delivery"
           image={usedTransmissionImage}
-        />
+        /></Link>
       </div>
     </div>
   );

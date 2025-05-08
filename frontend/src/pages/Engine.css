@@ -152,7 +152,7 @@ body {
 }
 #engine1 {
   position: relative;
-  height: 90vh;
+  height: auto;
   background-image: url('../assets/engbg2.jpeg');
   background-size: cover;
   background-position: center;
@@ -216,4 +216,20 @@ body {
     font-size: 2vh;
     margin: 2vh auto;
   }
+  #engbg2{
+    display: none;
+  }
 }
+@media (max-width: 690px) {
+#engine1{
+  flex-direction: column;
+  padding: 4vh 0vw;;
+}
+
+}
+@media (max-width: 360px) {
+  #engine1{
+    padding: 4vh 2vw;;
+  }
+  
+  }

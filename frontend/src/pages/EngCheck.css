@@ -4,7 +4,7 @@
   color: #111;
 }
 
-.highlight-text {
+.hgh-txt {
   color: #f59e0b;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2.5rem;
@@ -12,13 +12,7 @@
   margin-bottom: 0.5rem;
 }
 
-.badges-heading {
-  color: #1e293b;
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-  font-family: 'Blinker';
-  font-weight: 600;
-}
+
 
 .badges-list {
   list-style: none;
@@ -60,8 +54,10 @@
   margin: 2rem 0;
   height: 50vh;
   background-size: cover;
+  background-position: center;
   border-radius: 8px;
   overflow: hidden;
+  width: 100%;
 }
 #flx1 {
   display: flex;
@@ -203,7 +199,7 @@
   height: 17vh;
   width: 80vw;
 }
-#vn {
+#vnn {
   font-weight: 500;
 }
 #points {
@@ -257,12 +253,35 @@
   max-height: 300px;
   padding-top: 0.6rem;
 }
-
+.badges-head{
+  color: #1e293b;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  font-family: 'Blinker';
+  font-weight: 600;
+}
 .arrow {
   width: 18px;
   height: 18px;
   transition: transform 0.3s ease;
 }
+.check-points {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  font-family: 'Blinker', sans-serif;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.check-points li {
+  margin-bottom: 0.4rem;
+  list-style-type: disc;
+}
+
+#hrt {
+  width: 90vw;
+}
+
 
 .arrow.rotated {
   transform: rotate(180deg);
@@ -295,4 +314,29 @@
   .faq-answer {
     font-size: 0.9rem;
   }
+  #vin2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vh;
+}
+}
+@media screen and (max-width: 650px) {
+  .engine-check-image {
+    width: 90vw;
+    aspect-ratio: 16 / 9;
+  }
+  .eng-check-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .badges-head{
+    font-size: 4vh;
+  }
+  
+}
+@media screen and (max-width: 450px) {
+.hgh-txt{
+  font-size: 4vh;
+}
 }

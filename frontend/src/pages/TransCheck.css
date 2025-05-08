@@ -16,13 +16,7 @@
   #hrt{
     width: 90vw;
   }
-  .badges-heading {
-    color: #1e293b;
-    font-size: 2.6rem;
-    margin-bottom: 1rem;
-    font-family: 'Blinker';
-    font-weight: 600;
-  }
+  
   #choose-us{
     margin-top: 7vh;
   }
@@ -219,7 +213,13 @@
     padding: 1rem 1.5rem;
     transition: background 0.3s ease;
   }
-  
+  .transub-heading{
+    color: #1e293b;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Blinker';
+    font-weight: 600;
+  }
   .faq-item:hover {
     background-color: #e7e7e7;
   }
@@ -261,23 +261,26 @@
     font-weight: 500;
     text-align: center;
   }
-  @media screen and (max-width: 768px) {
+  
+  @media (max-width: 768px) {
     .transmission-check-image {
-      height: 200px;
+      
+      position: relative;
+      margin: 2rem 0;
+      border-radius: 8px;
+      overflow: hidden;
     }
-  
-    .overlay {
-      font-size: 1.2rem;
+    .trans-check-container {
+      padding: 3vh;
+      font-family: 'Blinker';
+      color: #111;
     }
-  
-    .check-item {
+    .transub-heading{
+      font-size: 5vh;
+    }
+    #trans-main{
+      padding: 0vh 2vw;
       flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .badge-images {
-      flex-direction: column;
-      align-items: flex-start;
+      gap: 2vh;
     }
   }
-  
