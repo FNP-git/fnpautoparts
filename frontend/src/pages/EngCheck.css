@@ -387,7 +387,7 @@ padding-left: 9vw;}
 
 
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
 #choose-us{
   display: flex;
   flex-direction: column;

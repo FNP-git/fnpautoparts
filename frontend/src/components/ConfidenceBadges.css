@@ -127,7 +127,7 @@
     align-items: center;
   }
   }
-    @media screen and (max-width: 416px) {
+    @media screen and (max-width: 480px) {
       .high-text {
         font-size: 6vh;
         text-wrap: nowrap;
