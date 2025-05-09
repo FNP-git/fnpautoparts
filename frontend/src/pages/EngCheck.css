@@ -283,10 +283,17 @@
 }
 
 
+
 .arrow.rotated {
   transform: rotate(180deg);
 }
-
+.engine-highlight-text{
+   color: #f59e0b;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
 
 @media screen and (max-width: 768px) {
   .engine-check-image {
@@ -335,7 +342,7 @@
   }
   
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 590px) {
 .hgh-txt{
   font-size: 3.5vh;
   padding-left: 9vw;
@@ -355,5 +362,49 @@ max-width: 95vw;
 padding-left: 9vw;}
 #points{
   max-width: 98vw;
+}
+.faq-question {
+    max-width: 98vw;
+    margin-left: 7vw;  }
+
+  .faq-answer {
+    max-width: 98vw;
+    margin-left: 7vw;
+  }
+  .faq-item {
+  max-width: 98vw;
+}
+.faq-section {
+  align-items: center;
+  justify-content: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+#choose-us{
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+
+}
+@media screen and (max-width: 350px) {
+#choose-us{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 99vw;
+}
+.hgh-txt{
+  font-size: 3.7vh;
+  padding-left: 9vw;
+}
+.engine-highlight-text{
+  font-size: 3.7vh;
+  padding-left: 0vw;
+  text-wrap: wrap;
+}
+#carf {
+  height: 30vh;
 }
 }

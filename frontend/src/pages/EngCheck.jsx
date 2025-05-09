@@ -149,7 +149,7 @@ const EngCheck = () => {
         </div>
 
         <div id="choose-us" className="fade-up-works">
-          <h3 className="highlight-text">WHY CHOOSE US FOR YOUR ENGINE NEEDS</h3>
+          <h3 className="engine-highlight-text">WHY CHOOSE US FOR YOUR ENGINE NEEDS</h3>
           <div id="points">
             <h3 id="vinh2">
               Quality Assurance -{' '}

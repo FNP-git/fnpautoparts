@@ -231,5 +231,10 @@ body {
   #engine1{
     padding: 4vh 2vw;;
   }
-  
+  #vin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   }

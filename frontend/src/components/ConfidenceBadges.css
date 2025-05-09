@@ -109,6 +109,8 @@
   }
  
   @media screen and (max-width: 490px) {
+    .conf-section {
+    padding-left: 0vw;}
     .badges-heading{
       text-wrap: wrap;
     }
@@ -125,3 +127,11 @@
     align-items: center;
   }
   }
+    @media screen and (max-width: 416px) {
+      .high-text {
+        font-size: 6vh;
+        text-wrap: nowrap;
+      }
+    .conf-section {
+      flex-wrap: wrap;
+    padding-left: 7vw;}}
