@@ -337,6 +337,23 @@
 }
 @media screen and (max-width: 450px) {
 .hgh-txt{
-  font-size: 4vh;
+  font-size: 3.5vh;
+  padding-left: 9vw;
+}
+ .badges-head{
+width: 95vw;
+padding-left: 9vw;  }
+#vinh{
+  padding-left: 9vw;
+}
+#vin2{
+  flex-direction: column;
+  max-width: 95vw;
+}
+#srcal{
+max-width: 95vw;
+padding-left: 9vw;}
+#points{
+  max-width: 98vw;
 }
 }

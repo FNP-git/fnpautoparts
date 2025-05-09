@@ -72,16 +72,25 @@
     gap: 2rem;
   }
   
-  .stat-box {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    min-width: 200px;
-    text-align: center;
-    color: white;
-    backdrop-filter: blur(4px);
-  }
+ .stat-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  min-width: 200px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  background: rgba(255, 193, 7, 0.1);
+}
+
   
   .stat-box h3 {
     font-size: 2rem;

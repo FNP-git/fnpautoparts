@@ -118,4 +118,13 @@
     .badges-lt img {
       margin-right: 0rem;
     }
+    #flx1 {
+    flex-direction: column;
+    width: 100%;
+    gap: 0vh;
+  }
+  .badge-images {
+    justify-content: center;
+    align-items: center;
+  }
   }
