@@ -164,6 +164,8 @@
 .works-btn.register {
   background: #f55353;
   color: #f6f54d;
+    border: 2px solid #f55353;
+
 }
 .works-btn.register:hover {
   transform: scale(1.1);
