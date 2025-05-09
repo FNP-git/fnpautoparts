@@ -107,14 +107,11 @@
     }
    
   }
+ 
   @media screen and (max-width: 490px) {
-    
     .badges-heading{
       text-wrap: wrap;
     }
-   
-  }
-  @media screen and (max-width: 375px) {
     .badges-lt img {
       margin-right: 0rem;
     }
