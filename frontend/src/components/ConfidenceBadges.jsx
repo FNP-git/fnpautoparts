@@ -2,7 +2,7 @@ import React from 'react';
 import './ConfidenceBadges.css';
 import starIcon from '../assets/star.png';
 import bbbBadge from '../assets/bbb-badge.png';
-import trustpilotBadge from '../assets/trustpilot.png';
+import trustpilotBadge from '../assets/Trustpilot.png';
 import authcert from '../assets/authcert.png';
 import dmca from '../assets/dmca.png';
 import useWorksAnimation from '../hooks/useWorksAnimation'; // ✅ import

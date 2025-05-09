@@ -3,7 +3,7 @@ import './TransCheck.css';
 import Ttype from '../assets/ttype.png';
 import starIcon from '../assets/star.png';
 import bbbBadge from '../assets/bbb-badge.png';
-import trustpilotBadge from '../assets/trustpilot.png';
+import trustpilotBadge from '../assets/Trustpilot.png';
 import transCheckImage from '../assets/transchk.png';
 import authcert from '../assets/authcert.png';
 import dmca from '../assets/dmca.png';

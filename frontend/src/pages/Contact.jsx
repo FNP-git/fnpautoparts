@@ -9,7 +9,7 @@ import cllIcon from '../assets/cll.svg';
 import mailIcon from '../assets/mail.svg';
 import timeIcon from '../assets/time.svg';
 import bbbBadge from '../assets/BBB.png';
-import trustpilotBadge from '../assets/trustpilot.png';
+import trustpilotBadge from '../assets/Trustpilot.png';
 import authcert from '../assets/authcert.png';
 import dmca from '../assets/dmca.png';
 import HamburgerMenu from '../components/HamburgerMenu';
