@@ -3,13 +3,15 @@ import './Form.css';
 
 const Form = () => {
   const [carData, setCarData] = useState({});
+  const [partList, setPartList] = useState([]);
+
   const [showMakeDropdown, setShowMakeDropdown] = useState(false);
   const [showModelDropdown, setShowModelDropdown] = useState(false);
+  const [showPartDropdown, setShowPartDropdown] = useState(false);
 
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
-    email: '',
     zip: '',
     year: '',
     make: '',
@@ -23,6 +25,11 @@ const Form = () => {
       .then((res) => res.json())
       .then((data) => setCarData(data))
       .catch((err) => console.error('Error loading car data:', err));
+
+    fetch('/smallParts.json')
+      .then((res) => res.json())
+      .then((data) => setPartList(data))
+      .catch((err) => console.error('Error loading parts list:', err));
   }, []);
 
   const currentYear = new Date().getFullYear();
@@ -44,6 +51,10 @@ const Form = () => {
   const modelsForMake = carData[formData.make] || [];
   const filteredModels = modelsForMake.filter((mod) =>
     mod.toLowerCase().includes(formData.model.toLowerCase())
+  );
+
+  const filteredParts = partList.filter((p) =>
+    p.toLowerCase().includes(formData.part.toLowerCase())
   );
 
   const handleSelectMake = (make) => {
@@ -68,14 +79,7 @@ const Form = () => {
         <input type="text" name="phone" value={formData.phone} onChange={handleChange} required />
 
         <div className="form-row email-zip-row">
-          <div className="form-col">
-            <label>Email*</label>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-          </div>
-          <div className="form-col">
-            <label>Zip Code*</label>
-            <input type="text" name="zip" value={formData.zip} onChange={handleChange} required />
-          </div>
+          {/* Email field was removed by you */}
         </div>
 
         <h4 className="form-title">Part Details</h4>
@@ -159,12 +163,51 @@ const Form = () => {
           </div>
         </div>
 
-        <label>Choose Part*</label>
-        <select name="part" value={formData.part} onChange={handleChange} required>
-          <option value=""></option>
-          <option value="Engine">Engine</option>
-          <option value="Transmission">Transmission</option>
-        </select>
+        <div className="form-col">
+          <label>Choose Part*</label>
+          <div style={{ position: 'relative' }}>
+            <input
+              type="text"
+              name="part"
+              placeholder="Select or type part"
+              value={formData.part}
+              onChange={(e) => {
+                handleChange(e);
+                setShowPartDropdown(true);
+              }}
+              onFocus={() => setShowPartDropdown(true)}
+              onBlur={() => setTimeout(() => setShowPartDropdown(false), 200)}
+              required
+            />
+            {showPartDropdown && filteredParts.length > 0 && (
+              <div className="dropdown">
+                {filteredParts.map((part, index) => (
+                  <div
+                    key={index}
+                    onMouseDown={() => {
+                      setFormData({ ...formData, part });
+                      setShowPartDropdown(false);
+                    }}
+                    className="dropdown-item"
+                  >
+                    {part}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="form-col">
+          <label>Remarks (Optional)</label>
+          <input
+            type="text"
+            name="zip"
+            value={formData.zip}
+            placeholder="Provide your Email & ZIP"
+            onChange={handleChange}
+          />
+        </div>
 
         <label>VIN Number (Optional)</label>
         <input type="text" name="vin" value={formData.vin} onChange={handleChange} />
