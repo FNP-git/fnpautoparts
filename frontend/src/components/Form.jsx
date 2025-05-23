@@ -87,10 +87,15 @@ const Form = () => {
         const errorMessages = {};
         let alertMessage = "Please fix the following errors:\n\n";
 
-        result.errors.forEach((error) => {
-          errorMessages[error.param] = error.msg;
-          alertMessage += `- ${error.msg}\n`;
-        });
+        if (result.errors && Array.isArray(result.errors)) {
+  result.errors.forEach((error) => {
+    errorMessages[error.param] = error.msg;
+    alertMessage += `- ${error.msg}\n`;
+  });
+} else {
+  alertMessage += "- Unexpected error occurred. Please try again.";
+}
+
 
         setErrors(errorMessages);
         alert(alertMessage);
