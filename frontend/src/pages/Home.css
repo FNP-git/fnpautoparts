@@ -180,7 +180,7 @@ body {
   display: flex;
   flex-direction: row; /* ✅ correct */
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   padding: 4vh 4vw;
 }

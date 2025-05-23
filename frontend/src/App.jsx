@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom';
-
+import Loader from './components/Loader'
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -8,11 +8,16 @@ import Contact from './pages/Contact';
 import BlogSection from './pages/BlogSection'; 
 import Engine from './pages/Engine';
 import Transmission from './pages/Transmission';
+import Warranty from './pages/Warranty';
+import Return from './pages/Return';
 
 
 const App = () => {
+    const [loading, setLoading] = useState(true)
+
   return (
     <>
+    {loading && <Loader />}
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,6 +26,9 @@ const App = () => {
         <Route path="/blog" element={<BlogSection />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/warranty" element={<Warranty />} />
+        <Route path="/return" element={<Return />} />
+
       </Routes>
     </>
   );

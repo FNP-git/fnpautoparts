@@ -2,7 +2,7 @@ import React from 'react';
 import './Blog.css';
 import BlogCard from '../components/BlogCard';
 import useWorksAnimation from '../hooks/useWorksAnimation'; // adjust the path as needed
-import blg1 from '../assets/blg1.svg';
+import blg1 from '../assets/blg1.png';
 import blg2 from '../assets/blg2.svg';
 import Navbar from '../components/Navbar';
 import Bbb from '../components/Bbb';
@@ -49,6 +49,7 @@ const Blog = () => {
       </h2>
       <div className="blog-cards">
         {blogData.map((blog) => (
+          
           <BlogCard
             key={blog.id}
             image={blog.image}
@@ -56,6 +57,7 @@ const Blog = () => {
             description={blog.description}
             onClick={() => handleCardClick(blog)}
           />
+        
         ))}
       </div>
     </section>

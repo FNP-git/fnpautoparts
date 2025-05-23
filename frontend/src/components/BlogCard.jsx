@@ -17,6 +17,8 @@ const BlogCard = ({ image, title, description, onClick }) => {
     description.length > 120 ? description.slice(0, 120) + '...' : description;
 
   return (
+    <>
+    <a href="https://www.instagram.com/fnpauto/">
     <div className="blog-card" onClick={onClick}>
       <div className="blog-img" style={{ backgroundImage: `url(${image})` }}></div>
       <h3 className="blog-title">{title}</h3>
@@ -42,6 +44,8 @@ const BlogCard = ({ image, title, description, onClick }) => {
         </span>
       </div>
     </div>
+    </a>
+    </>
   );
 };
 

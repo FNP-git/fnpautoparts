@@ -4,20 +4,23 @@ import './Form.css';
 const Form = () => {
   const [carData, setCarData] = useState({});
   const [partList, setPartList] = useState([]);
-
   const [showMakeDropdown, setShowMakeDropdown] = useState(false);
   const [showModelDropdown, setShowModelDropdown] = useState(false);
   const [showPartDropdown, setShowPartDropdown] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const [formData, setFormData] = useState({
-    fullName: '',
-    phone: '',
-    zip: '',
-    year: '',
-    make: '',
-    model: '',
-    part: '',
-    vin: '',
+    leadLabel: "FNPAUTOPARTS",
+    fullName: "",
+    phone: "",
+    year: "",
+    make: "",
+    model: "",
+    part: "",
+    vin: "",
+    email: "",
+    zip: "",
+    remarks:"",
   });
 
   useEffect(() => {
@@ -34,12 +37,12 @@ const Form = () => {
 
   const currentYear = new Date().getFullYear();
   const years = [];
-  for (let y = 1950; y <= currentYear; y++) {
-    years.push(y);
-  }
+  for (let y = 1950; y <= currentYear; y++) years.push(y);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === "fullName" && /[^a-zA-Z\s]/.test(value)) return;
+    if ((name === "phone" || name === "zip") && /[^0-9]/.test(value)) return;
     setFormData({ ...formData, [name]: value });
   };
 
@@ -67,16 +70,62 @@ const Form = () => {
     setShowModelDropdown(false);
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrors({});
+
+    try {
+      const response = await fetch("http://localhost:5001/api/form/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        const errorMessages = {};
+        let alertMessage = "Please fix the following errors:\n\n";
+
+        result.errors.forEach((error) => {
+          errorMessages[error.param] = error.msg;
+          alertMessage += `- ${error.msg}\n`;
+        });
+
+        setErrors(errorMessages);
+        alert(alertMessage);
+      } else {
+        alert("Form submitted successfully!");
+        setFormData({
+          leadLabel: "FNPAUTOPARTS",
+          fullName: "",
+          phone: "",
+          year: "",
+          make: "",
+          model: "",
+          part: "",
+          vin: "",
+          email: "",
+          zip: "",
+          remarks: "",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <div className="form-container">
-      <form className="custom-form">
+      <form className="custom-form" onSubmit={handleSubmit}>
         <h4 className="form-title">Contact info</h4>
 
         <label>Full Name*</label>
-        <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required />
+        <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required placeholder="John Doe" />
 
         <label>Phone No.*</label>
-        <input type="text" name="phone" value={formData.phone} onChange={handleChange} required />
+        <input type="text" name="phone" value={formData.phone} onChange={handleChange} required placeholder="123-456-7890" />
 
         <div className="form-row email-zip-row">
           {/* Email field was removed by you */}
@@ -199,18 +248,49 @@ const Form = () => {
         </div>
 
         <div className="form-col">
-          <label>Remarks (Optional)</label>
+          <label>VIN Number (Optional)</label>
           <input
             type="text"
-            name="zip"
-            value={formData.zip}
-            placeholder="Provide your Email & ZIP"
+            name="vin"
+            value={formData.vin}
             onChange={handleChange}
           />
         </div>
 
-        <label>VIN Number (Optional)</label>
-        <input type="text" name="vin" value={formData.vin} onChange={handleChange} />
+        <div className="last-row">
+          <div id="l-row">
+            <label>Email*</label>
+            <input
+              type="text"
+              name="email"
+              value={formData.email}
+              placeholder="email"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div id="l-row">
+            <label>Zip Code*</label>
+            <input
+              type="text"
+              name="zip"
+              value={formData.zip}
+              placeholder="ZIP"
+              onChange={handleChange}
+              required
+            />
+          </div> 
+        </div>
+        <div className="form-col">
+          <label>Remarks(Optional)</label>
+          <input
+            type="text"
+            name="remarks"
+            value={formData.remarks}
+            placeholder='Describe your part needs'
+            onChange={handleChange}
+          />
+        </div>
 
         <button type="submit">Submit</button>
       </form>

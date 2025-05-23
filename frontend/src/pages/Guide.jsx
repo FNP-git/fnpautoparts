@@ -2,8 +2,8 @@ import React from 'react';
 import GuideCard from '../components/GuideCard';
 import './Guide.css'; // Page-specific styling
 import { Link } from 'react-router-dom';
-import usedEngineImage from '../assets/usedEngineImage.svg';
-import usedTransmissionImage from '../assets/usedTransmissionImage.svg';
+import usedEngineImage from '../assets/usedEngineImage.png';
+import usedTransmissionImage from '../assets/usedTransmissionImage.png';
 import useScrollAnimation from '../hooks/useScrollAnimation'; // ✅ Import the scroll hook
 
 const Guide = () => {

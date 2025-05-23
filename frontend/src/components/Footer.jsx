@@ -4,6 +4,7 @@ import auth from '../assets/authcert.png';
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -11,20 +12,17 @@ const Footer = () => {
       <div className="footer-top">
         <div className="footer-section">
           <h4>Quick Links</h4>
-          <a href="#">Engines</a>
-          <a href="#">Transmission</a>
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Blogs/Post</a>
+          <Link to="/engine">Engines</Link>
+          <Link to="/transmission">Transmission</Link>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/blog">Blogs/Post</Link>
         </div>
 
         <div className="footer-section">
-          <h4>About FNP</h4>
-          <a href="#">Terms and conditions</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Return and Cancellation Policy</a>
-          <a href="#">Warranty Policy</a>
-          <a href="#">Cookie Policy</a>
+          <h4>More</h4>
+          <Link to="/warranty">Warranty Terms and conditions</Link>
+          <Link to="/return">Return and Cancellation Policy</Link>
         </div>
 
         <div className="footer-section">

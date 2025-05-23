@@ -124,7 +124,10 @@ textarea::placeholder {
   color: rgba(255, 255, 255, 0.55); /* Almost white */
   opacity: 1; /* Override Firefox default */
 }
-
+.last-row{
+  display: flex;
+  gap: 1vw;
+}
 /* Tablets and smaller laptops (width <= 1024px) */
 @media screen and (max-width: 1024px) {
   .form-container {

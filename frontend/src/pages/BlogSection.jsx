@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import Bbb from '../components/Bbb';
 import BlogCard from '../components/BlogCard';
 
-import blg1 from '../assets/blg1.svg';
+import blg1 from '../assets/blg1.png';
 import blg2 from '../assets/blg2.svg';
 import HamburgerMenu from '../components/HamburgerMenu';
 
@@ -33,27 +33,7 @@ const blogData = [
     description:
       'Consider compatibility, mileage, warranties, and certifications when picking a used engine. Learn how to shop smartly.',
   },
-  {
-    id: 4,
-    image: blg2,
-    title: '5 Signs Your Transmission Might Be Failing',
-    description:
-      'Grinding noises, delayed shifting, fluid leaks, and warning lights are common signs. Read this to catch issues early.',
-  },
-  {
-    id: 5,
-    image: blg1,
-    title: 'Top 10 Tips for Engine Maintenance',
-    description:
-      'From regular oil changes to filter care, these expert-backed tips can extend engine life and improve performance.',
-  },
-  {
-    id: 6,
-    image: blg2,
-    title: 'Used vs. Remanufactured Transmissions: What’s Best?',
-    description:
-      'Learn the key differences, benefits, and considerations between used and reman transmissions before you buy.',
-  },
+  
 ];
 
 const BlogSection = () => {
