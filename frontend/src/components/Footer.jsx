@@ -23,27 +23,28 @@ const Footer = () => {
           <h4>More</h4>
           <Link to="/warranty">Warranty Terms and conditions</Link>
           <Link to="/return">Return and Cancellation Policy</Link>
+          <Link to="/return">Privacy Policy</Link>
         </div>
 
         <div className="footer-section">
           <h4>Location</h4>
-          <p>• Head Office: 11239 Ventura Blvd, Studio City, CA 91604, USA</p>
-          <p>• Sales Office: 287 Grove St, Worcester, MA 01605</p>
+          <p>• Sales Office: 11239 Ventura Blvd, Studio City, CA 91604, USA</p>
+          <p>• Head Office: 287 Grove St, Worcester, MA 01605</p>
         </div>
 
         <div className="footer-section social">
           <h4>Social Media :</h4>
           <div className="social-icons">
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=61572281897388">
               <FaFacebookF />
             </a>
-            <a href="#">
+            <a href="https://x.com/FNPautoparts">
               <FaXTwitter />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/company/106935016/admin/dashboard/">
               <FaLinkedinIn />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/fnpauto/">
               <FaInstagram />
             </a>
           </div>

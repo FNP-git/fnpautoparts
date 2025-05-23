@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import detectBrowser from '../utils/detectBrowser'
+
 import './Form.css';
 
 const Form = () => {
@@ -21,6 +23,7 @@ const Form = () => {
     email: "",
     zip: "",
     remarks:"",
+    browser: "",
   });
 
   useEffect(() => {
@@ -34,7 +37,10 @@ const Form = () => {
       .then((data) => setPartList(data))
       .catch((err) => console.error('Error loading parts list:', err));
   }, []);
-
+useEffect(() => {
+  const browser = detectBrowser();
+  setFormData((prevData) => ({ ...prevData, browser }));
+}, []);
   const currentYear = new Date().getFullYear();
   const years = [];
   for (let y = 1950; y <= currentYear; y++) years.push(y);
@@ -75,7 +81,7 @@ const Form = () => {
     setErrors({});
 
     try {
-      const response = await fetch("/api/form/", {
+const response = await fetch("/api/form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -113,6 +119,7 @@ const Form = () => {
           email: "",
           zip: "",
           remarks: "",
+          browser: detectBrowser(),
         });
       }
     } catch (error) {
@@ -294,6 +301,8 @@ const Form = () => {
             onChange={handleChange}
           />
         </div>
+        <input type="hidden" name="browser" value={formData.browser} />
+
 
         <button type="submit">Submit</button>
       </form>

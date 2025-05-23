@@ -82,6 +82,7 @@ router.post("/", validateForm, async (req, res) => {
       part,
       vin,
       remarks,
+      browser,
     } = req.body;
 
     const mailOptions = {
@@ -98,9 +99,9 @@ router.post("/", validateForm, async (req, res) => {
         `Make: ${make}\n` +
         `Model: ${model}\n` +
         `Part: ${part}\n` +
-        `VIN: ${vin || "Not Provided"}\n\n` +
-        `REMARKS: ${remarks || "Not Provided"}\n\n` +
-        `--\nFNP AutoParts Team`,
+        `VIN: ${vin || "Not Provided"}\n` +
+        `Remarks: ${remarks || "Not Provided"}\n` +
+        `Browser: ${browser || "Not Provided"}\n`,
     };
 
     const info = await transporter.sendMail(mailOptions);

@@ -10,6 +10,7 @@ import Engine from './pages/Engine';
 import Transmission from './pages/Transmission';
 import Warranty from './pages/Warranty';
 import Return from './pages/Return';
+import Privacy from './pages/Privacy';
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/warranty" element={<Warranty />} />
         <Route path="/return" element={<Return />} />
+        <Route path="/privacy" element={<Privacy />} />
 
       </Routes>
     </>

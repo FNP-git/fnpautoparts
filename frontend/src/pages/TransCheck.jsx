@@ -131,7 +131,7 @@ const TransCheck = () => {
             </div>
         </div>
         <h3 id="srcal">
-          Still Not Sure? Give us a call at 1-888-807-9696 Our Team Will Assist You If Anything
+          Still Not Sure? Give us a call at (888) 807 9696 Our Team Will Assist You If Anything
           Doesn't Match. <br />
           Or
         </h3>

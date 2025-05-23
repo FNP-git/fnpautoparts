@@ -71,7 +71,7 @@ const Scams = () => {
       <div className="scam-footer fade-up-on-scroll">
   <p>
     <strong>“Have questions or think you’ve seen a scam? Call us at </strong>
-    <a className="scam-highlight-phone" href="tel:18888079696">📞 1-888-807-9696</a>
+    <a className="scam-highlight-phone" href="tel:18888079696">📞 (888) 807 9696</a>
     <strong> — we’ll help you avoid it.”</strong>
   </p>
 </div>

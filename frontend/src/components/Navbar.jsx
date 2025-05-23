@@ -27,7 +27,7 @@ const Navbar = () => {
         <a href="tel:+18888079696" style={{ textDecoration: 'none' }}>
           <button id="nav-btn">
             <img id="phn" src={phn_y} alt="call icon" />
-            +1-888-807-9696
+            (888) 807 9696
           </button>
         </a>
       </div>

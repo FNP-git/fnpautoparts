@@ -35,7 +35,7 @@ const HamburgerMenu = () => {
         <a href="tel:+18888079696" style={{ textDecoration: 'none' }}>
           <button className="ham-call-btn">
             <img src={phn_y} alt="call icon" className="ham-call-icon" />
-            +1-888-807-9696
+            (888) 807 9696
           </button>
         </a>
 
