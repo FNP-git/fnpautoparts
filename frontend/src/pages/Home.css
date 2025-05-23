@@ -81,6 +81,11 @@ body {
   opacity: 0;
   animation-delay: 0.2s;
 }
+.hidden-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 #auth {
   height: 10vh;
