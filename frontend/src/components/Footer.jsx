@@ -23,7 +23,7 @@ const Footer = () => {
           <h4>More</h4>
           <Link to="/warranty">Warranty Terms and conditions</Link>
           <Link to="/return">Return and Cancellation Policy</Link>
-          <Link to="/return">Privacy Policy</Link>
+          <Link to="/privacy">Privacy Policy</Link>
         </div>
 
         <div className="footer-section">

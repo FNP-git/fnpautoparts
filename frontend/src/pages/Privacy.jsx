@@ -46,8 +46,8 @@ const Privacy = () => {
               </ul>
 
               <h4>3. Sharing Your Information</h4>
+              <p>We do not sell or rent your personal information. However, we may share it with:</p>
               <ul>
-                <li>We do not sell or rent your personal information. However, we may share it with:</li>
                 <li>Service Providers: Payment processors, shipping partners, and marketing platforms.</li>
                 <li>Legal Authorities: If required by law or to protect our legal rights.</li>
                 <li>Business Transfers: In case of a merger, sale, or acquisition of our business.</li>
