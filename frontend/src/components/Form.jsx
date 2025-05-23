@@ -75,7 +75,7 @@ const Form = () => {
     setErrors({});
 
     try {
-      const response = await fetch("http://localhost:5001/api/form/", {
+      const response = await fetch("/api/form/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
