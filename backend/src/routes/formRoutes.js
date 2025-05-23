@@ -56,57 +56,58 @@ const validateForm = [
     .withMessage(`Year must be between 1900-${new Date().getFullYear()}`),
 ];
 
-// GET route to verify API
+// GET route to verify API is alive
 router.get("/", (req, res) => {
   res.json({ message: "API is working!" });
 });
 
-// POST route for form
+// POST route for form submission
 router.post("/", validateForm, async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-
-  const {
-    leadLabel,
-    fullName,
-    phone,
-    email,
-    zip,
-    year,
-    make,
-    model,
-    part,
-    vin,
-    remarks,
-  } = req.body;
-
-  const mailOptions = {
-    from: `"FNP AutoParts Support" <devops@fnpautoparts.com>`,
-    to: "leads1@autopartocean.com",
-    subject: "New Form Submission FNP AutoParts",
-    text:
-      `Company: ${leadLabel}\n` +
-      `Full Name: ${fullName}\n` +
-      `Phone: ${phone}\n` +
-      `Email: ${email}\n` +
-      `Zip: ${zip}\n` +
-      `Year: ${year}\n` +
-      `Make: ${make}\n` +
-      `Model: ${model}\n` +
-      `Part: ${part}\n` +
-      `VIN: ${vin || "Not Provided"}\n\n` +
-      `REMARKS: ${remarks || "Not Provided"}\n\n` +
-      `--\nFNP AutoParts Team`,
-  };
-
   try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      console.error("Validation failed:", errors.array());
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const {
+      leadLabel,
+      fullName,
+      phone,
+      email,
+      zip,
+      year,
+      make,
+      model,
+      part,
+      vin,
+      remarks,
+    } = req.body;
+
+    const mailOptions = {
+      from: `"FNP AutoParts Support" <devops@fnpautoparts.com>`,
+      to: "leads1@autopartocean.com",
+      subject: "New Form Submission FNP AutoParts",
+      text:
+        `Company: ${leadLabel}\n` +
+        `Full Name: ${fullName}\n` +
+        `Phone: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Zip: ${zip}\n` +
+        `Year: ${year}\n` +
+        `Make: ${make}\n` +
+        `Model: ${model}\n` +
+        `Part: ${part}\n` +
+        `VIN: ${vin || "Not Provided"}\n\n` +
+        `REMARKS: ${remarks || "Not Provided"}\n\n` +
+        `--\nFNP AutoParts Team`,
+    };
+
     await transporter.sendMail(mailOptions);
     res.json({ message: "Form submitted and email sent successfully!" });
   } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).json({ error: "Failed to send email" });
+    console.error("Unexpected error in /api/form POST:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 

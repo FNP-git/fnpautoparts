@@ -127,9 +127,7 @@ const Form = () => {
         <label>Phone No.*</label>
         <input type="text" name="phone" value={formData.phone} onChange={handleChange} required placeholder="123-456-7890" />
 
-        <div className="form-row email-zip-row">
-          {/* Email field was removed by you */}
-        </div>
+        
 
         <h4 className="form-title">Part Details</h4>
 
