@@ -103,11 +103,16 @@ router.post("/", validateForm, async (req, res) => {
         `--\nFNP AutoParts Team`,
     };
 
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.response);
     res.json({ message: "Form submitted and email sent successfully!" });
   } catch (error) {
-    console.error("Unexpected error in /api/form POST:", error);
-    res.status(500).json({ error: "Internal server error" });
+    console.error("Error sending email:", {
+      message: error.message,
+      response: error.response,
+      code: error.code,
+    });
+    res.status(500).json({ error: "Failed to send email" });
   }
 });
 
