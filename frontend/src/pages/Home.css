@@ -43,6 +43,8 @@ body {
   flex-direction: column; /* ✅ makes card-row appear below hm-main */
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 
@@ -81,6 +83,7 @@ body {
   opacity: 0;
   animation-delay: 0.2s;
 }
+
 .hidden-content {
   opacity: 0;
   pointer-events: none;

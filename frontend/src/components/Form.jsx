@@ -107,6 +107,25 @@ const response = await fetch("/api/form", {
         alert(alertMessage);
       } else {
         alert("Form submitted successfully!");
+        // ✅ Bing UET Conversion Event Trigger
+if (typeof uetq !== "undefined") {
+  uetq.push('event', '', {
+    'event_category': 'Lead',
+    'event_action': 'Form Submission',
+    'event_label': 'FNP Inquiry'
+  });
+  console.log("✅ Bing UET event fired");
+}
+if (typeof uetq !== "undefined") {
+  uetq.push('set', {
+    'pid': {
+      'em': formData.email || "",
+      'ph': formData.phone || ""
+    }
+  });
+}
+
+
         setFormData({
           leadLabel: "FNPAUTOPARTS",
           fullName: "",

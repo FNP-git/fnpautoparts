@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Home.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -25,22 +25,13 @@ import CardRowMobile from '../components/CardRowMobile';
 import HamburgerMenu from '../components/HamburgerMenu';
 import Loader from '../components/Loader';
 
-const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // 2-second loader delay
-    return () => clearTimeout(timer);
-  }, []);
-
+const Home = ({ loading }) => {
   return (
     <>
-      {isLoading && <Loader />}
+      {loading && <Loader />}
       <Navbar />
       <HamburgerMenu />
-      <div id="home" className={isLoading ? 'hidden-content' : ''}>
+      <div id="home" className={loading ? 'hidden-content' : ''}>
         <div id="hm-main">
           <div id="hm-left">
             <div id="cert">

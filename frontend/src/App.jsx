@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Loader from './components/Loader'
+import Loader from './components/Loader';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,16 +12,21 @@ import Warranty from './pages/Warranty';
 import Return from './pages/Return';
 import Privacy from './pages/Privacy';
 
-
 const App = () => {
-    const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Directly wait for loader animation to finish (4.5s)
+    const timer = setTimeout(() => setLoading(false), 4500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-    {loading && <Loader />}
+      {loading && <Loader />}
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home loading={loading} />} />
         <Route path="/engine" element={<Engine />} />
         <Route path="/transmission" element={<Transmission />} />
         <Route path="/blog" element={<BlogSection />} />
@@ -30,8 +35,7 @@ const App = () => {
         <Route path="/warranty" element={<Warranty />} />
         <Route path="/return" element={<Return />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="*" element={<Home />} />
-
+        <Route path="*" element={<Home loading={loading} />} />
       </Routes>
     </>
   );
