@@ -106,41 +106,51 @@ const response = await fetch("/api/form", {
         setErrors(errorMessages);
         alert(alertMessage);
       } else {
-        alert("Form submitted successfully!");
-        // ✅ Bing UET Conversion Event Trigger
-if (typeof uetq !== "undefined") {
-  uetq.push('event', '', {
-    'event_category': 'Lead',
-    'event_action': 'Form Submission',
-    'event_label': 'FNP Inquiry'
-  });
-  console.log("✅ Bing UET event fired");
-}
-if (typeof uetq !== "undefined") {
-  uetq.push('set', {
-    'pid': {
-      'em': formData.email || "",
-      'ph': formData.phone || ""
-    }
-  });
-}
+  alert("Form submitted successfully!");
 
-
-        setFormData({
-          leadLabel: "FNPAUTOPARTS",
-          fullName: "",
-          phone: "",
-          year: "",
-          make: "",
-          model: "",
-          part: "",
-          vin: "",
-          email: "",
-          zip: "",
-          remarks: "",
-          browser: detectBrowser(),
-        });
+  // ✅ Google Ads Conversion Tracking
+  if (typeof gtag === "function") {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16900543345/bA93CJSci6YaEPGm5_o-',
+      'event_callback': () => {
+        console.log("✅ Google Ads conversion fired");
       }
+    });
+  }
+
+  // ✅ Bing UET Conversion Tracking
+  if (typeof uetq !== "undefined") {
+    uetq.push('event', '', {
+      'event_category': 'Lead',
+      'event_action': 'Form Submission',
+      'event_label': 'FNP Inquiry'
+    });
+    uetq.push('set', {
+      'pid': {
+        'em': formData.email || "",
+        'ph': formData.phone || ""
+      }
+    });
+    console.log("✅ Bing UET event fired");
+  }
+
+  // ✅ Reset form
+  setFormData({
+    leadLabel: "FNPAUTOPARTS",
+    fullName: "",
+    phone: "",
+    year: "",
+    make: "",
+    model: "",
+    part: "",
+    vin: "",
+    email: "",
+    zip: "",
+    remarks: "",
+    browser: detectBrowser(),
+  });
+}
+
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Something went wrong. Please try again.");
