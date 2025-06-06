@@ -142,6 +142,7 @@
   #transmission1 {
     position: relative;
     height: 90vh;
+    
     background-image: url('../assets/engbg2.jpeg');
     background-size: cover;
     background-position: center;
@@ -161,6 +162,7 @@
   #transmission-left {
     animation: fadeLeft 1.2s ease forwards;
     opacity: 0;
+    
     animation-delay: 0.2s;
   }
   
@@ -168,6 +170,7 @@
     animation: fadeRight 1.2s ease forwards;
     opacity: 0;
     animation-delay: 0.2s;
+    
   }
   
   #transmission-head {

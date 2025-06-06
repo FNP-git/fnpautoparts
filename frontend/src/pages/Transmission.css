@@ -155,7 +155,7 @@
   #transmission1 {
     position: relative;
     height: 90vh;
-    background-image: url('../assets/engbg2.jpeg');
+    background: url(../assets/frmbg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
