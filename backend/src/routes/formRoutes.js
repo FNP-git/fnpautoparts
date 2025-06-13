@@ -81,7 +81,6 @@ router.post("/", validateForm, async (req, res) => {
       model,
       part,
       vin,
-      remarks,
       browser,
     } = req.body;
 
@@ -100,7 +99,7 @@ router.post("/", validateForm, async (req, res) => {
         `Model: ${model}\n` +
         `Part: ${part}\n` +
         `VIN: ${vin || "Not Provided"}\n` +
-        `Remarks: ${remarks || "Not Provided"}\n` +
+        // `Remarks: ${remarks || "Not Provided"}\n` +
         `Browser: ${browser || "Not Provided"}\n`,
     };
 

@@ -22,7 +22,7 @@ const Form = () => {
     vin: "",
     email: "",
     zip: "",
-    remarks:"",
+    // remarks:"",
     browser: "",
   });
 
@@ -146,7 +146,7 @@ const response = await fetch("/api/form", {
     vin: "",
     email: "",
     zip: "",
-    remarks: "",
+    // remarks: "",
     browser: detectBrowser(),
   });
 }
@@ -320,16 +320,7 @@ const response = await fetch("/api/form", {
             />
           </div> 
         </div>
-        <div className="form-col">
-          <label>Remarks(Optional)</label>
-          <input
-            type="text"
-            name="remarks"
-            value={formData.remarks}
-            placeholder='Describe your part needs'
-            onChange={handleChange}
-          />
-        </div>
+        
         <input type="hidden" name="browser" value={formData.browser} />
 
 
