@@ -252,39 +252,22 @@ const response = await fetch("/api/form", {
         </div>
 
         <div className="form-col">
-          <label>Choose Part*</label>
-          <div style={{ position: 'relative' }}>
-            <input
-              type="text"
-              name="part"
-              placeholder="Select or type part"
-              value={formData.part}
-              onChange={(e) => {
-                handleChange(e);
-                setShowPartDropdown(true);
-              }}
-              onFocus={() => setShowPartDropdown(true)}
-              onBlur={() => setTimeout(() => setShowPartDropdown(false), 200)}
-              required
-            />
-            {showPartDropdown && filteredParts.length > 0 && (
-              <div className="dropdown">
-                {filteredParts.map((part, index) => (
-                  <div
-                    key={index}
-                    onMouseDown={() => {
-                      setFormData({ ...formData, part });
-                      setShowPartDropdown(false);
-                    }}
-                    className="dropdown-item"
-                  >
-                    {part}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
+  <label>Choose Part*</label>
+  <select
+    name="part"
+    value={formData.part}
+    onChange={(e) => handleChange(e)}
+    required
+  >
+    <option value="" disabled>Select part</option>
+    {filteredParts.map((part, index) => (
+      <option key={index} value={part}>
+        {part}
+      </option>
+    ))}
+  </select>
+</div>
+
 
         <div className="form-col">
           <label>VIN Number (Optional)</label>
