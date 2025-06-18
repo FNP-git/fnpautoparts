@@ -70,9 +70,9 @@ const Contact = () => {
         <h4 className="contact-sub-alt">Have Questions? Let’s Get You the Right Part</h4>
 
         <div className="badge-grid">
-          <a href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062" target="_blank" rel="noreferrer">
+          {/* <a href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062" target="_blank" rel="noreferrer">
             <img src={bbbBadge} alt="BBB Badge" />
-          </a>
+          </a> */}
           <a href="https://www.trustpilot.com/review/fnpautoparts.com" target="_blank" rel="noreferrer">
             <img src={trustpilotBadge} alt="Trustpilot Badge" />
           </a>

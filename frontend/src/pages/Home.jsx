@@ -36,7 +36,7 @@ const Home = ({ loading }) => {
           <div id="hm-left">
             <div id="cert">
               <a href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062" target="_blank" rel="noopener noreferrer">
-                <img id="bbb1" src={bbb} alt="bbb accredited" />
+                {/* <img id="bbb1" src={bbb} alt="bbb accredited" /> */}
               </a>
               <a href="https://www.trustpilot.com/review/fnpautoparts.com" target="_blank" rel="noopener noreferrer">
                 <img id="trust" src={trust} alt="Trustpilot" />

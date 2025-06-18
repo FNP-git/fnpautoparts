@@ -21,7 +21,7 @@ const Scams = () => {
   ];
 
   const trustedBenefits = [
-    'BBB Accredited and A+ Rated.',
+    // 'BBB Accredited and A+ Rated.',
     'Every part backed by a warranty.',
     'Real customer reviews with photos.',
     'Verified business address and live support.',

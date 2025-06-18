@@ -25,7 +25,7 @@ const ConfidenceBadges = () => {
       <div id="conf-right" className="slide-left-works">
         <div className="badge-images">
           <div id="flx1">
-            <a href="https://www.bbb.org" target="_blank" rel="noopener noreferrer"><img id='conf-icon' src={bbbBadge} alt="BBB Badge" /></a>
+            {/* <a href="https://www.bbb.org" target="_blank" rel="noopener noreferrer"><img id='conf-icon' src={bbbBadge} alt="BBB Badge" /></a> */}
             <a href="https://www.trustpilot.com" target="_blank" rel="noopener noreferrer"><img id='conf-trust' src={trustpilotBadge} alt="Trustpilot Badge" /></a>
           </div>
           <div id="flx1">

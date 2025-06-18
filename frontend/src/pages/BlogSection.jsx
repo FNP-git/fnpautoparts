@@ -55,10 +55,10 @@ const BlogSection = () => {
                 <h3>10,000+</h3>
                 <p>Parts Shipped</p>
               </div>
-              <div className="blog-stat-box hover-scale">
+              {/* <div className="blog-stat-box hover-scale">
                 <img src={BBB} alt="BBB Accredited" className="stat-icon" />
                 <p>Accredited Business</p>
-              </div>
+              </div> */}
               <div className="blog-stat-box hover-scale">
                 <h3>100%</h3>
                 <p>Compatibility Guarantee</p>

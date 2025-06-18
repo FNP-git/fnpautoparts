@@ -40,10 +40,10 @@ const About = () => {
               <h3>10,000+</h3>
               <p>Parts Shipped</p>
             </div>
-            <div className="stat-box">
+            {/* <div className="stat-box">
               <img src={bbbIcon} alt="BBB Icon" className="stat-icon" />
               <p>Accredited Business</p>
-            </div>
+            </div> */}
             <div className="stat-box">
               <h3>100%</h3>
               <p>Compatibility Guarantee</p>
