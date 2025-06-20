@@ -14,7 +14,6 @@ const Scams = () => {
   const redFlags = [
     'Fake websites with no real contact info.',
     'Unrealistically cheap prices with no warranty.',
-    'Payments via CashApp / Zelle only.',
     'No shipping updates or proof of delivery.',
     'No physical address or Google presence.',
     'Generic support email addresses.',
