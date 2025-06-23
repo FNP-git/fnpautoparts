@@ -116,6 +116,14 @@ const response = await fetch("/api/form", {
         console.log("✅ Google Ads conversion fired");
       }
     });
+     gtag('event', 'conversion', {
+    'send_to': 'AW-17259924611/L5XWCNKyreEaEIOZlqZA',
+    'value': 1.0,
+    'currency': 'USD',
+    'event_callback': () => {
+      console.log("✅ Google Ads conversion (2) fired");
+    }
+  });
   }
 
   // ✅ Bing UET Conversion Tracking
