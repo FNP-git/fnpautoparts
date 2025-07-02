@@ -35,18 +35,20 @@ const Form = () => {
     const existingTracking = sessionStorage.getItem('adTrackingData');
     let tracking;
 
-    // If current page has UTM parameters, use them (fresh ad click)
-    if (urlParams.get('utm_source')) {
+    // If current page has UTM parameters OR Google ad parameters, use them (fresh ad click)
+    if (urlParams.get('utm_source') || urlParams.get('gclid') || urlParams.get('gad_campaignid')) {
       tracking = {
-        utm_source: urlParams.get('utm_source'),
-        utm_medium: urlParams.get('utm_medium') || 'none',
-        utm_campaign: urlParams.get('utm_campaign') || 'none',
+        utm_source: urlParams.get('utm_source') || (urlParams.get('gclid') ? 'google' : 'direct'),
+        utm_medium: urlParams.get('utm_medium') || (urlParams.get('gclid') ? 'cpc' : 'none'),
+        utm_campaign: urlParams.get('utm_campaign') || 'google_campaign_' + (urlParams.get('gad_campaignid') || 'unknown'),
         utm_term: urlParams.get('utm_term') || '',
         utm_content: urlParams.get('utm_content') || '',
-        utm_id: urlParams.get('utm_id') || '',
+        utm_id: urlParams.get('utm_id') || urlParams.get('gad_campaignid') || '',
         gclid: urlParams.get('gclid') || '',
         msclkid: urlParams.get('msclkid') || '',
         fbclid: urlParams.get('fbclid') || '',
+        gad_source: urlParams.get('gad_source') || '',
+        gad_campaignid: urlParams.get('gad_campaignid') || '',
         referrer: document.referrer || 'direct',
         landing_page: window.location.href,
         timestamp: new Date().toISOString()
@@ -166,7 +168,7 @@ const Form = () => {
     setErrors({});
 
     try {
-      const storedTracking = localStorage.getItem('adTrackingData');
+      const storedTracking = sessionStorage.getItem('adTrackingData') || localStorage.getItem('adTrackingData');
       const currentTracking = storedTracking ? JSON.parse(storedTracking) : trackingData;
       
       const submissionData = {
