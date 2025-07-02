@@ -35,12 +35,17 @@ const Form = () => {
     const existingTracking = sessionStorage.getItem('adTrackingData');
     let tracking;
 
-    // If current page has UTM parameters OR Google ad parameters, use them (fresh ad click)
-    if (urlParams.get('utm_source') || urlParams.get('gclid') || urlParams.get('gad_campaignid')) {
+    // If current page has UTM parameters OR Google/Bing ad parameters, use them (fresh ad click)
+    if (urlParams.get('utm_source') || urlParams.get('gclid') || urlParams.get('gad_campaignid') || urlParams.get('msclkid')) {
       tracking = {
-        utm_source: urlParams.get('utm_source') || (urlParams.get('gclid') ? 'google' : 'direct'),
-        utm_medium: urlParams.get('utm_medium') || (urlParams.get('gclid') ? 'cpc' : 'none'),
-        utm_campaign: urlParams.get('utm_campaign') || 'google_campaign_' + (urlParams.get('gad_campaignid') || 'unknown'),
+        utm_source: urlParams.get('utm_source') || 
+                   (urlParams.get('gclid') ? 'google' : 
+                   (urlParams.get('msclkid') ? 'bing' : 'direct')),
+        utm_medium: urlParams.get('utm_medium') || 
+                   (urlParams.get('gclid') || urlParams.get('msclkid') ? 'cpc' : 'none'),
+        utm_campaign: urlParams.get('utm_campaign') || 
+                     (urlParams.get('gad_campaignid') ? 'google_campaign_' + urlParams.get('gad_campaignid') :
+                     (urlParams.get('msclkid') ? 'bing_auto_campaign' : 'google_auto_campaign')),
         utm_term: urlParams.get('utm_term') || '',
         utm_content: urlParams.get('utm_content') || '',
         utm_id: urlParams.get('utm_id') || urlParams.get('gad_campaignid') || '',
@@ -85,10 +90,15 @@ const Form = () => {
           const referrerUrl = new URL(document.referrer);
           const referrerParams = new URLSearchParams(referrerUrl.search);
           
-          if (referrerParams.get('utm_source')) {
-            tracking.utm_source = referrerParams.get('utm_source');
-            tracking.utm_medium = referrerParams.get('utm_medium') || 'none';
-            tracking.utm_campaign = referrerParams.get('utm_campaign') || 'none';
+          if (referrerParams.get('utm_source') || referrerParams.get('gclid') || referrerParams.get('msclkid')) {
+            tracking.utm_source = referrerParams.get('utm_source') || 
+                                 (referrerParams.get('gclid') ? 'google' : 
+                                 (referrerParams.get('msclkid') ? 'bing' : tracking.utm_source));
+            tracking.utm_medium = referrerParams.get('utm_medium') || 
+                                 (referrerParams.get('gclid') || referrerParams.get('msclkid') ? 'cpc' : 'none');
+            tracking.utm_campaign = referrerParams.get('utm_campaign') || 
+                                   (referrerParams.get('gclid') ? 'google_auto_campaign' :
+                                   (referrerParams.get('msclkid') ? 'bing_auto_campaign' : 'none'));
             tracking.utm_term = referrerParams.get('utm_term') || '';
             tracking.utm_content = referrerParams.get('utm_content') || '';
             tracking.utm_id = referrerParams.get('utm_id') || '';
