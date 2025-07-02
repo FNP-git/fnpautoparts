@@ -10,6 +10,7 @@ const Form = () => {
   const [showModelDropdown, setShowModelDropdown] = useState(false);
   const [showPartDropdown, setShowPartDropdown] = useState(false);
   const [errors, setErrors] = useState({});
+  const [trackingData, setTrackingData] = useState({});
 
   const [formData, setFormData] = useState({
     leadLabel: "FNPAUTOPARTS",
@@ -26,6 +27,29 @@ const Form = () => {
     browser: "",
   });
 
+  // Capture ad tracking parameters
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    const tracking = {
+      utm_source: urlParams.get('utm_source') || 'direct',
+      utm_medium: urlParams.get('utm_medium') || 'none',
+      utm_campaign: urlParams.get('utm_campaign') || 'none',
+      utm_term: urlParams.get('utm_term') || '',
+      utm_content: urlParams.get('utm_content') || '',
+      utm_id: urlParams.get('utm_id') || '',
+      gclid: urlParams.get('gclid') || '',
+      msclkid: urlParams.get('msclkid') || '',
+      fbclid: urlParams.get('fbclid') || '',
+      referrer: document.referrer || 'direct',
+      landing_page: window.location.href,
+      timestamp: new Date().toISOString()
+    };
+    
+    setTrackingData(tracking);
+    localStorage.setItem('adTrackingData', JSON.stringify(tracking));
+  }, []);
+
   useEffect(() => {
     fetch('/carData.json')
       .then((res) => res.json())
@@ -37,10 +61,12 @@ const Form = () => {
       .then((data) => setPartList(data))
       .catch((err) => console.error('Error loading parts list:', err));
   }, []);
-useEffect(() => {
-  const browser = detectBrowser();
-  setFormData((prevData) => ({ ...prevData, browser }));
-}, []);
+
+  useEffect(() => {
+    const browser = detectBrowser();
+    setFormData((prevData) => ({ ...prevData, browser }));
+  }, []);
+
   const currentYear = new Date().getFullYear();
   const years = [];
   for (let y = 1950; y <= currentYear; y++) years.push(y);
@@ -76,15 +102,30 @@ useEffect(() => {
     setShowModelDropdown(false);
   };
 
+  // Generate unique lead ID
+  const generateLeadId = () => {
+    return 'LEAD_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors({});
 
     try {
-const response = await fetch("/api/form", {
+      const storedTracking = localStorage.getItem('adTrackingData');
+      const currentTracking = storedTracking ? JSON.parse(storedTracking) : trackingData;
+      
+      const submissionData = {
+        ...formData,
+        tracking: currentTracking,
+        leadId: generateLeadId(),
+        submissionTime: new Date().toISOString()
+      };
+
+      const response = await fetch("/api/form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(submissionData),
       });
 
       const result = await response.json();
@@ -94,71 +135,60 @@ const response = await fetch("/api/form", {
         let alertMessage = "Please fix the following errors:\n\n";
 
         if (result.errors && Array.isArray(result.errors)) {
-  result.errors.forEach((error) => {
-    errorMessages[error.param] = error.msg;
-    alertMessage += `- ${error.msg}\n`;
-  });
-} else {
-  alertMessage += "- Unexpected error occurred. Please try again.";
-}
-
+          result.errors.forEach((error) => {
+            errorMessages[error.param] = error.msg;
+            alertMessage += `- ${error.msg}\n`;
+          });
+        } else {
+          alertMessage += "- Unexpected error occurred. Please try again.";
+        }
 
         setErrors(errorMessages);
         alert(alertMessage);
       } else {
-  alert("Form submitted successfully!");
+        alert("Form submitted successfully!");
 
-  // ✅ Google Ads Conversion Tracking
-  if (typeof gtag === "function") {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-16900543345/bA93CJSci6YaEPGm5_o-',
-      'event_callback': () => {
-        console.log("✅ Google Ads conversion fired");
+        // ✅ Google Ads Conversion Tracking
+        if (typeof gtag === "function") {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-16900543345/bA93CJSci6YaEPGm5_o-',
+            'event_callback': () => {
+              console.log("✅ Google Ads conversion fired");
+            }
+          });
+        }
+
+        // ✅ Bing UET Conversion Tracking
+        if (typeof uetq !== "undefined") {
+          uetq.push('event', '', {
+            'event_category': 'Lead',
+            'event_action': 'Form Submission',
+            'event_label': 'FNP Inquiry'
+          });
+          uetq.push('set', {
+            'pid': {
+              'em': formData.email || "",
+              'ph': formData.phone || ""
+            }
+          });
+          console.log("✅ Bing UET event fired");
+        }
+
+        // ✅ Reset form
+        setFormData({
+          leadLabel: "FNPAUTOPARTS",
+          fullName: "",
+          phone: "",
+          year: "",
+          make: "",
+          model: "",
+          part: "",
+          vin: "",
+          email: "",
+          zip: "",
+          browser: detectBrowser(),
+        });
       }
-    });
-  //    gtag('event', 'conversion', {
-  //   'send_to': 'AW-17259924611/L5XWCNKyreEaEIOZlqZA',
-  //   'value': 1.0,
-  //   'currency': 'USD',
-  //   'event_callback': () => {
-  //     console.log("✅ Google Ads conversion (2) fired");
-  //   }
-  // });
-  }
-
-  // ✅ Bing UET Conversion Tracking
-  if (typeof uetq !== "undefined") {
-    uetq.push('event', '', {
-      'event_category': 'Lead',
-      'event_action': 'Form Submission',
-      'event_label': 'FNP Inquiry'
-    });
-    uetq.push('set', {
-      'pid': {
-        'em': formData.email || "",
-        'ph': formData.phone || ""
-      }
-    });
-    console.log("✅ Bing UET event fired");
-  }
-
-  // ✅ Reset form
-  setFormData({
-    leadLabel: "FNPAUTOPARTS",
-    fullName: "",
-    phone: "",
-    year: "",
-    make: "",
-    model: "",
-    part: "",
-    vin: "",
-    email: "",
-    zip: "",
-    // remarks: "",
-    browser: detectBrowser(),
-  });
-}
-
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Something went wrong. Please try again.");
@@ -175,8 +205,6 @@ const response = await fetch("/api/form", {
 
         <label>Phone No.*</label>
         <input type="text" name="phone" value={formData.phone} onChange={handleChange} required placeholder="123-456-7890" />
-
-        
 
         <h4 className="form-title">Part Details</h4>
 
@@ -260,22 +288,21 @@ const response = await fetch("/api/form", {
         </div>
 
         <div className="form-col">
-  <label>Choose Part*</label>
-  <select
-    name="part"
-    value={formData.part}
-    onChange={(e) => handleChange(e)}
-    required
-  >
-    <option value="" disabled>Select part</option>
-    {filteredParts.map((part, index) => (
-      <option key={index} value={part}>
-        {part}
-      </option>
-    ))}
-  </select>
-</div>
-
+          <label>Choose Part*</label>
+          <select
+            name="part"
+            value={formData.part}
+            onChange={(e) => handleChange(e)}
+            required
+          >
+            <option value="" disabled>Select part</option>
+            {filteredParts.map((part, index) => (
+              <option key={index} value={part}>
+                {part}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <div className="form-col">
           <label>VIN Number (Optional)</label>
@@ -313,7 +340,6 @@ const response = await fetch("/api/form", {
         </div>
         
         <input type="hidden" name="browser" value={formData.browser} />
-
 
         <button type="submit">Submit</button>
       </form>
