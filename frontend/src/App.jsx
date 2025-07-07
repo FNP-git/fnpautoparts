@@ -11,7 +11,6 @@ import Transmission from './pages/Transmission';
 import Warranty from './pages/Warranty';
 import Return from './pages/Return';
 import Privacy from './pages/Privacy';
-import Offers from './pages/Offers';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -36,7 +35,6 @@ const App = () => {
         <Route path="/warranty" element={<Warranty />} />
         <Route path="/return" element={<Return />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="/offers" element={<Offers />} />
         <Route path="*" element={<Home loading={loading} />} />
       </Routes>
     </>
