@@ -19,22 +19,22 @@ import zelle from '../assets/zelle.svg';
 const Associates = () => {
   return (
     <div className="associates-section">
-      <div className="assoc-group">
+      {/* <div className="assoc-group">
         <h3 className="assoc-title">Business Associates</h3>
         <div className="assoc-row">
           <img loading="lazy" src={wexpress} alt="Worldwide Express" />
           <img loading="lazy" src={apo} alt="Auto Part Ocean" />
           <img loading="lazy" src={avenue} alt="Avenue Supermarts" />
         </div>
-      </div>
+      </div> */}
 
-      <div className="assoc-group">
+      {/* <div className="assoc-group">
         <h3 className="assoc-title">Payment Partners</h3>
         <div className="assoc-row">
           <img loading="lazy" src={auth} alt="Authorize.Net" />
           <img loading="lazy" src={seamless} alt="SeamlessChex" />
         </div>
-      </div>
+      </div> */}
 
       <div className="assoc-group">
         <h3 className="assoc-title">Payment Options</h3>

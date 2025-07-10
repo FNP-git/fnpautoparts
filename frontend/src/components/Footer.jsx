@@ -33,7 +33,6 @@ const Footer = () => {
 
         <div className="footer-section">
           <h4>Location</h4>
-          <p>• Head Office: 225 Cedar Hill StMarlborough, MA 01752, USA</p>
           <p>• Sales Office: 11239 Ventura Blvd, Studio City, CA 91604, USA</p>
           <p>• Sales Office:  287 Grove St, Worcester, MA 01605</p>
         </div>
