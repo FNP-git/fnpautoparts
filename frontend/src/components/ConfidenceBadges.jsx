@@ -16,10 +16,10 @@ const ConfidenceBadges = () => {
         <h3 className="high-text">BUY WITH CONFIDENCE</h3>
         <h2 className="badges-heading">Badges We Proudly Present</h2>
         <ul className="badges-lt">
-          <li><img src={starIcon} alt="Star" /> BBB Accredited Business</li>
-          <li><img src={starIcon} alt="Star" /> Rated Excellent on Trustpilot</li>
-          <li><img src={starIcon} alt="Star" /> DMCA Verified</li>
-          <li><img src={starIcon} alt="Star" /> Authorize.net Verified</li>
+          <li><img src={starIcon} loading="lazy" alt="Star" /> BBB Accredited Business</li>
+          <li><img src={starIcon} loading="lazy" alt="Star" /> Rated Excellent on Trustpilot</li>
+          <li><img src={starIcon} loading="lazy" alt="Star" /> DMCA Verified</li>
+          <li><img src={starIcon} loading="lazy" alt="Star" /> Authorize.net Verified</li>
         </ul>
       </div>
       <div id="conf-right" className="slide-left-works">

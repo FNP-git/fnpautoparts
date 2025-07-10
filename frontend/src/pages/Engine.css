@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   height: 100%;
   width: 100%;
 }
@@ -32,27 +31,28 @@ body {
   }
 }
 
-#engine {
+/* ✅ New layout with image layer */
+.engine-container {
   position: relative;
   height: 90vh;
-  background-image: url('/engbg.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-}
-#thr{
-  margin-top: 2vh;
-  color: red;
-  font-family: 'Blinker';
-  font-size: 4vh
+  overflow: hidden;
 }
 
+.engine-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 
-#engine::before {
+.engine-overlay {
   content: '';
   position: absolute;
   top: 0;
@@ -79,6 +79,13 @@ body {
   animation: fadeRight 1.2s ease forwards;
   opacity: 0;
   animation-delay: 0.2s;
+}
+
+#thr {
+  margin-top: 2vh;
+  color: red;
+  font-family: 'Blinker';
+  font-size: 4vh;
 }
 
 #auth,
@@ -150,10 +157,11 @@ body {
   height: 2.3vh;
   margin-bottom: 0.2vh;
 }
+
 #engine1 {
   position: relative;
   height: auto;
-    background: url(../assets/frmbg.png);
+  background: url(../assets/frmbg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -163,6 +171,7 @@ body {
   justify-content: space-around;
 }
 
+/* 🔁 Media Queries - preserved exactly */
 @media (max-width: 1024px) {
   #engine {
     flex-direction: column;
@@ -216,25 +225,28 @@ body {
     font-size: 2vh;
     margin: 2vh auto;
   }
-  #engbg2{
+
+  #engbg2 {
     display: none;
   }
 }
+
 @media (max-width: 690px) {
-#engine1{
-  flex-direction: column;
-  padding: 4vh 0vw;;
+  #engine1 {
+    flex-direction: column;
+    padding: 4vh 0vw;
+  }
 }
 
-}
 @media (max-width: 360px) {
-  #engine1{
-    padding: 4vh 2vw;;
+  #engine1 {
+    padding: 4vh 2vw;
   }
-  #vin{
+
+  #vin {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  }
+}

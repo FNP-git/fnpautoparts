@@ -12,6 +12,7 @@ import {
   FaShare,
 } from 'react-icons/fa6';
 
+
 const BlogCard = ({ image, title, description, onClick }) => {
   const trimmedDescription =
     description.length > 120 ? description.slice(0, 120) + '...' : description;
@@ -20,7 +21,7 @@ const BlogCard = ({ image, title, description, onClick }) => {
     <>
     <a href="https://www.instagram.com/fnpauto/">
     <div className="blog-card" onClick={onClick}>
-      <div className="blog-img" style={{ backgroundImage: `url(${image})` }}></div>
+      <div className="blog-img" loading="lazy" style={{ backgroundImage: `url(${image})` }}></div>
       <h3 className="blog-title">{title}</h3>
       <p className="blog-desc">{trimmedDescription}</p>
       <div className="blog-social">

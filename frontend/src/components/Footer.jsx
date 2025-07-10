@@ -2,8 +2,13 @@ import React from 'react';
 import './Footer.css';
 import auth from '../assets/authcert.png';
 
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from 'react-icons/fa6';
+
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -55,7 +60,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img id="authc" src={auth} alt="Authorize.net certificate" />
+              <img id="authc" loading="lazy" src={auth} alt="Authorize.net certificate" />
             </a>
           </div>
         </div>

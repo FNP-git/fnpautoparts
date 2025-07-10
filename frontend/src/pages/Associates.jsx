@@ -22,31 +22,31 @@ const Associates = () => {
       <div className="assoc-group">
         <h3 className="assoc-title">Business Associates</h3>
         <div className="assoc-row">
-          <img src={apo} alt="Auto Part Ocean" />
-          <img src={wexpress} alt="Worldwide Express" />
-          <img src={avenue} alt="Avenue Supermarts" />
+          <img loading="lazy" src={wexpress} alt="Worldwide Express" />
+          <img loading="lazy" src={apo} alt="Auto Part Ocean" />
+          <img loading="lazy" src={avenue} alt="Avenue Supermarts" />
         </div>
       </div>
 
       <div className="assoc-group">
         <h3 className="assoc-title">Payment Partners</h3>
         <div className="assoc-row">
-          <img src={auth} alt="Authorize.Net" />
-          <img src={seamless} alt="SeamlessChex" />
+          <img loading="lazy" src={auth} alt="Authorize.Net" />
+          <img loading="lazy" src={seamless} alt="SeamlessChex" />
         </div>
       </div>
 
       <div className="assoc-group">
         <h3 className="assoc-title">Payment Options</h3>
         <div className="assoc-row">
-          <img src={cashapp} alt="Cash App" />
-          <img src={rocircle} alt="Mastercard" />
-          <img src={unipay} alt="UnionPay" />
-          <img src={dinerclub} alt="Diners Club" />
-          <img src={discover} alt="Discover" />
-          <img src={visa} alt="Visa" />
-          <img src={amex} alt="American Express" />
-          <img src={zelle} alt="Zelle" />
+          <img loading="lazy" src={cashapp} alt="Cash App" />
+          <img loading="lazy" src={rocircle} alt="Mastercard" />
+          <img loading="lazy" src={unipay} alt="UnionPay" />
+          <img loading="lazy" src={dinerclub} alt="Diners Club" />
+          <img loading="lazy" src={discover} alt="Discover" />
+          <img loading="lazy" src={visa} alt="Visa" />
+          <img loading="lazy" src={amex} alt="American Express" />
+          <img loading="lazy" src={zelle} alt="Zelle" />
         </div>
       </div>
     </div>

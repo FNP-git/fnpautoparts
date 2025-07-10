@@ -29,12 +29,12 @@ const HamburgerMenu = () => {
       {/* Mobile top bar */}
       <div className="ham-nav">
         <Link to="/" onClick={() => setIsOpen(false)}>
-          <img src={logo} alt="fnp logo" className="ham-logo" />
+          <img loading="lazy" src={logo} alt="fnp logo" className="ham-logo" />
         </Link>
 
         <a href="tel:+18888079696" style={{ textDecoration: 'none' }}>
           <button className="ham-call-btn">
-            <img src={phn_y} alt="call icon" className="ham-call-icon" />
+            <img loading="lazy" src={phn_y} alt="call icon" className="ham-call-icon" />
             (888) 807 9696
           </button>
         </a>
@@ -42,6 +42,7 @@ const HamburgerMenu = () => {
         <img
           src={hamIcon}
           alt="menu"
+          loading="lazy"
           className="ham-menu-icon"
           onClick={() => setIsOpen(true)}
         />
@@ -56,6 +57,7 @@ const HamburgerMenu = () => {
           <img
             src={crossIcon}
             alt="close"
+            loading="lazy"
             className="ham-close-icon"
             onClick={() => setIsOpen(false)}
           />

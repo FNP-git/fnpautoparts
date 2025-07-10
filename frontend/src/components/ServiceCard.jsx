@@ -5,7 +5,7 @@ const ServiceCard = ({ icon, title, points }) => {
   return (
     <div className="service-card">
       <div className="service-icon">
-        <img src={icon} alt={`${title} Icon`} loading="lazy" />
+        <img src={icon}  alt={`${title} Icon`} loading="lazy" />
       </div>
       <div className="service-content">
         <h4 className="service-title">{title}</h4>

@@ -10,7 +10,7 @@ const TestimonialCard = ({ testimonial }) => {
       <p className="testimonial-text">{text}</p>
 
       <div className="testimonial-footer">
-        <img src={image} alt={name} className="testimonial-user" />
+        <img loading="lazy" src={image} alt={name} className="testimonial-user" />
         <span className="testimonial-name">{name}</span>
       </div>
 
@@ -20,7 +20,7 @@ const TestimonialCard = ({ testimonial }) => {
         ))}
       </div>
 
-      <img src={girlImg} alt="girl" className="girl-overlay" />
+      <img loading="lazy" src={girlImg} alt="girl" className="girl-overlay" />
     </div>
   );
 };

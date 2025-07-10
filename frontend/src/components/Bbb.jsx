@@ -10,7 +10,7 @@ const Bbb = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img id="bbb" src={bbb} alt="BBB Accredited Business" />
+        <img id="bbb" loading="lazy" src={bbb} alt="BBB Accredited Business" />
       </a>
     </div>
   );

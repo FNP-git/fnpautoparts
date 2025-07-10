@@ -13,20 +13,20 @@ import Return from './pages/Return';
 import Privacy from './pages/Privacy';
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Directly wait for loader animation to finish (4.5s)
-    const timer = setTimeout(() => setLoading(false), 4500);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   // Directly wait for loader animation to finish (4.5s)
+  //   const timer = setTimeout(() => setLoading(false), 4500);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <>
-      {loading && <Loader />}
+      {/* {loading && <Loader />} */}
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home loading={loading} />} />
+        <Route path="/" element={<Home />} />
         <Route path="/engine" element={<Engine />} />
         <Route path="/transmission" element={<Transmission />} />
         <Route path="/blog" element={<BlogSection />} />
@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/warranty" element={<Warranty />} />
         <Route path="/return" element={<Return />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="*" element={<Home loading={loading} />} />
+        <Route path="*" element={<Home/>} />
       </Routes>
     </>
   );

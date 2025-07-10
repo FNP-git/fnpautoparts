@@ -12,13 +12,23 @@ import CardItem from '../components/CardItem';
 import TransCheck from './TransCheck';
 import redarw from '../assets/redarw.svg';
 import HamburgerMenu from '../components/HamburgerMenu';
+import transbg from '/transbg.webp'; // make sure the path is correct
 
 const Transmission = () => {
   return (
     <>
       <Navbar />
       <HamburgerMenu />
-      <div id="transmission">
+      <div id="transmission" className="transmission-container">
+        <img
+          src={transbg}
+          alt="Transmission Hero"
+          className="transmission-bg-img"
+          fetchpriority="high"
+          decoding="async"
+        />
+
+        <div className="transmission-overlay" />
         <div id="transmission-left">
           <div id="transmission-head">
             <h1 className="transmission-hd">YOUR COMPLETE GUIDE TO BUYING</h1>
@@ -42,8 +52,10 @@ const Transmission = () => {
           </div>
         </div>
       </div>
+
       <Bbb />
       <TransCheck />
+
       <div id="transmission1">
         <div id="transmission-left">
           <div id="transmission-head">
@@ -52,8 +64,14 @@ const Transmission = () => {
             </h1>
           </div>
           <div id="transmission-sub">
-            <h5 id="transmission-sbh">Fill in your details and let us find the perfect transmission match - <br />delivered to your door, with compatibility guaranteed.</h5>
-            <h5 id="thr">You're almost there <img id='redarw' src={redarw} alt="" /></h5>
+            <h5 id="transmission-sbh">
+              Fill in your details and let us find the perfect transmission match -
+              <br />
+              delivered to your door, with compatibility guaranteed.
+            </h5>
+            <h5 id="thr">
+              You're almost there <img id="redarw" src={redarw} alt="" />
+            </h5>
           </div>
           <div>
             <button id="transmission-btn">
@@ -68,6 +86,7 @@ const Transmission = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </>
   );

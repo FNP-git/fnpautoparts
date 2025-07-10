@@ -6,7 +6,7 @@ const ScamCard = ({ icon, title, points }) => {
     <div className="scam-card">
       <div className="scam-content">
         <h3 className="scam-title">
-          <img src={icon} alt="icon" className="title-icon" />
+          <img loading="lazy" src={icon} alt="icon" className="title-icon" />
           {title}
         </h3>
         <hr className="scam-divider" />

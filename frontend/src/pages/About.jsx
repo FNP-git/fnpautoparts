@@ -26,7 +26,7 @@ const About = () => {
         <div className="about-content">
           <h2 className="about-heading">ABOUT US</h2>
           <div className="about-icon">
-            <img src={autoLogo} alt="Auto Logo" />
+            <img loading="lazy" src={autoLogo} alt="Auto Logo" />
           </div>
           <h3 className="about-subheading">Driven by Purpose. Trusted by Thousands.</h3>
           <p className="about-description">

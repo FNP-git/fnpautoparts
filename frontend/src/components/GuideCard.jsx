@@ -10,7 +10,7 @@ const GuideCard = ({ title, subtitle, buttonLabel = 'Shop', image }) => {
         <button className="guide-card-button">{buttonLabel}</button>
       </div>
       <div className="guide-card-image-container">
-        <img src={image} alt={title} className="guide-card-image" />
+        <img loading="lazy" src={image} alt={title} className="guide-card-image" />
       </div>
     </div>
   );

@@ -13,7 +13,12 @@ import trustpilotBadge from '../assets/Trustpilot.png';
 import authcert from '../assets/authcert.png';
 import dmca from '../assets/dmca.png';
 import HamburgerMenu from '../components/HamburgerMenu';
-import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa6';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from 'react-icons/fa6';
 
 import Form from '../components/Form';
 
@@ -35,31 +40,31 @@ const Contact = () => {
     </div>
     <div className="contact-cards-wrapper">
       <div className="contact-card">
-        <img src={locIcon} alt="Location" className="contact-icon" />
+        <img loading="lazy" src={locIcon} alt="Location" className="contact-icon" />
         <h4>Address 1</h4>
         <p>Head Office: 12309 Ventura Blvd, Studio City, CA 91604, USA</p>
       </div>
 
       <div className="contact-card">
-        <img src={locIcon} alt="Location" className="contact-icon" />
+        <img loading="lazy" src={locIcon} alt="Location" className="contact-icon" />
         <h4>Address 2</h4>
         <p>Sales Office: 287 Grove St, Worcester, MA 01605</p>
       </div>
 
       <a href="tel:+18888079696" className="contact-card link-card">
-        <img src={cllIcon} alt="Call" className="contact-icon" />
+        <img loading="lazy" src={cllIcon} alt="Call" className="contact-icon" />
         <h4>Call Us</h4>
         <p>(888) 807 9696</p>
       </a>
 
       <a href="mailto:Sales@fnpautoparts.com" className="contact-card link-card">
-        <img src={mailIcon} alt="Email" className="contact-icon" />
+        <img loading="lazy" src={mailIcon} alt="Email" className="contact-icon" />
         <h4>Send us a Mail</h4>
         <p>Sales@fnpautoparts.com</p>
       </a>
 
       <div className="contact-card">
-        <img src={timeIcon} alt="Time" className="contact-icon" />
+        <img loading="lazy" src={timeIcon} alt="Time" className="contact-icon" />
         <h4>Opening Time</h4>
         <p>Monday–Saturday<br />10:00am – 7:00pm</p>
       </div>
@@ -70,9 +75,9 @@ const Contact = () => {
         <h4 className="contact-sub-alt">Have Questions? Let’s Get You the Right Part</h4>
 
         <div className="badge-grid">
-          {/* <a href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062" target="_blank" rel="noreferrer">
+          <a href="https://www.bbb.org/us/ma/marlborough/profile/used-auto-parts/fnp-autoparts-0021-566062" target="_blank" rel="noreferrer">
             <img src={bbbBadge} alt="BBB Badge" />
-          </a> */}
+          </a>
           <a href="https://www.trustpilot.com/review/fnpautoparts.com" target="_blank" rel="noreferrer">
             <img src={trustpilotBadge} alt="Trustpilot Badge" />
           </a>

@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const formRoutes = require("./src/routes/formRoutes");
-
+import compression from 'compression';
 const app = express();
 
 const allowedOrigins = [
@@ -14,7 +14,7 @@ const allowedOrigins = [
   'http://localhost:5174',
 
 ];
-
+app.use(compression());
 app.use(cors({
   origin: allowedOrigins,
   methods: ['GET', 'POST', 'OPTIONS'],

@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className="nav">
       <div>
         <Link to="/">
-          <img  id="lgo" src={logo} alt="fnp autopart logo" />
+          <img loading="lazy"  id="lgo" src={logo} alt="fnp autopart logo" />
         </Link>
       </div>
 
@@ -26,7 +26,7 @@ const Navbar = () => {
       <div id="call-btn">
         <a href="tel:+18888079696" style={{ textDecoration: 'none' }}>
           <button id="nav-btn">
-            <img id="phn" src={phn_y} alt="call icon" />
+            <img loading="lazy" id="phn" src={phn_y} alt="call icon" />
             (888) 807 9696
           </button>
         </a>
