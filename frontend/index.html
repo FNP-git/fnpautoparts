@@ -32,7 +32,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- 🚀 Lazy-load Google Analytics -->
+    <!-- 🚀 Lazy-load Google Ads gtag: AW-16900543345 -->
     <script>
       setTimeout(() => {
         const gtagScript = document.createElement('script');
@@ -44,6 +44,21 @@
         function gtag(){ dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'AW-16900543345');
+      }, 3000);
+    </script>
+
+    <!-- 🚀 Lazy-load Google Ads gtag: AW-17238875410 -->
+    <script>
+      setTimeout(() => {
+        const gtagScript2 = document.createElement('script');
+        gtagScript2.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17238875410';
+        gtagScript2.async = true;
+        document.head.appendChild(gtagScript2);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17238875410');
       }, 3000);
     </script>
 
