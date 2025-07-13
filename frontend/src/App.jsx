@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Loader from './components/Loader';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -13,17 +11,10 @@ import Return from './pages/Return';
 import Privacy from './pages/Privacy';
 
 const App = () => {
-  // const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   // Directly wait for loader animation to finish (4.5s)
-  //   const timer = setTimeout(() => setLoading(false), 4500);
-  //   return () => clearTimeout(timer);
-  // }, []);
 
   return (
     <>
-      {/* {loading && <Loader />} */}
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />

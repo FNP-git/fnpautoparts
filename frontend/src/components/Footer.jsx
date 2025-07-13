@@ -69,7 +69,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div>
         <p>© 2019 FNP Autoparts. All Rights Reserved.</p>
-        <p>Managed by: FNP GLobal</p></div>
+        </div>
         <div>
           <p>FNP Autoparts is an enity of Revenue Dealer LLC</p>
         </div>

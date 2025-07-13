@@ -8,8 +8,6 @@ const Form = () => {
   const [partList, setPartList] = useState([]);
   const [showMakeDropdown, setShowMakeDropdown] = useState(false);
   const [showModelDropdown, setShowModelDropdown] = useState(false);
-  const [showPartDropdown, setShowPartDropdown] = useState(false);
-  const [errors, setErrors] = useState({});
   const [trackingData, setTrackingData] = useState({});
 
   const [formData, setFormData] = useState({
@@ -106,8 +104,8 @@ const Form = () => {
             tracking.msclkid = referrerParams.get('msclkid') || '';
             tracking.fbclid = referrerParams.get('fbclid') || '';
           }
-        } catch (e) {
-          console.log('Could not parse referrer URL');
+        } catch (error) {
+          console.log(error.message);
         }
       }
     }
@@ -175,7 +173,6 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrors({});
 
     try {
       const storedTracking = sessionStorage.getItem('adTrackingData') || localStorage.getItem('adTrackingData');
@@ -209,7 +206,6 @@ const Form = () => {
           alertMessage += "- Unexpected error occurred. Please try again.";
         }
 
-        setErrors(errorMessages);
         alert(alertMessage);
       } else {
         alert("Form submitted successfully!");
