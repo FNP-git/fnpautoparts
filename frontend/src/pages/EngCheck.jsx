@@ -138,7 +138,7 @@ const EngCheck = () => {
           </h3>
         </div>
         <h3 id="srcal">
-          Still Not Sure? Give us a call at <a href="tel:+18888079696" style={{ textDecoration: 'underline', color: '#000' }}>(888) 807 9696</a> Our Team Will Assist You If Anything
+          Still Not Sure? Give us a call at <a href="tel:+18888079696" style={{ textDecoration: 'underline', color: '#000' }}>+18888079696</a> Our Team Will Assist You If Anything
           Doesn't Match. <br />
           Or
         </h3>

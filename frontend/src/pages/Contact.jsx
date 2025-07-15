@@ -54,7 +54,7 @@ const Contact = () => {
       <a href="tel:+18888079696" className="contact-card link-card">
         <img loading="lazy" src={cllIcon} alt="Call" className="contact-icon" />
         <h4>Call Us</h4>
-        <p>(888) 807 9696</p>
+        <p>+18888079696</p>
       </a>
 
       <a href="mailto:Sales@fnpautoparts.com" className="contact-card link-card">
