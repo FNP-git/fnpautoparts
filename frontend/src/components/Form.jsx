@@ -406,17 +406,16 @@ const Form = () => {
         <input type="hidden" name="browser" value={formData.browser} />
 
         {/* SMS Consent Checkbox */}
-        <div style={{ marginBottom: '20px', textAlign: 'left' }}>
-          <label style={{ display: 'flex', alignItems: 'flex-start', fontSize: '14px', lineHeight: '1.4' }}>
-            <input
-              type="checkbox"
-              checked={smsConsent}
-              onChange={(e) => setSmsConsent(e.target.checked)}
-              style={{ marginRight: '8px', marginTop: '2px', flexShrink: 0 }}
-            />
-            <span>
-              By providing your phone number, you agree to receive a text message from FNP Auto Parts. Message and Data rates may apply, Message frequency varies. To stop receiving messages, reply 'STOP' at any time. For more information, reply 'HELP'. <a href="/privacy" style={{ color: '#007bff' }}>Privacy Policy</a> & <a href="/terms" style={{ color: '#007bff' }}>Terms & Conditions</a>
-            </span>
+        <div className="checkbox-container">
+          <input
+            type="checkbox"
+            id="smsConsent"
+            checked={smsConsent}
+            onChange={(e) => setSmsConsent(e.target.checked)}
+            className="consent-checkbox"
+          />
+          <label htmlFor="smsConsent" className="consent-label">
+            By providing your phone number, you agree to receive a text message from FNP Auto Parts. Message and Data rates may apply, Message frequency varies. To stop receiving messages, reply 'STOP' at any time. For more information, reply 'HELP'. <a href="/privacy">Privacy Policy</a> & <a href="/terms">Terms & Conditions</a>
           </label>
         </div>
 

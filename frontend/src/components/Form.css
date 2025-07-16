@@ -128,6 +128,11 @@ textarea::placeholder {
   display: flex;
   gap: 1vw;
 }
+
+.checkbox-container input{
+  width: 5%;
+}
+
 /* Tablets and smaller laptops (width <= 1024px) */
 @media screen and (max-width: 1024px) {
   .form-container {
