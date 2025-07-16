@@ -9,7 +9,7 @@ const Form = () => {
   const [showMakeDropdown, setShowMakeDropdown] = useState(false);
   const [showModelDropdown, setShowModelDropdown] = useState(false);
   const [trackingData, setTrackingData] = useState({});
-  const [smsConsent, setSmsConsent] = useState(true); // Default checked
+  const [smsConsent, setSmsConsent] = useState(false); // Default checked
 
   const [formData, setFormData] = useState({
     leadLabel: "FNPAUTOPARTS",
@@ -251,7 +251,7 @@ const Form = () => {
           zip: "",
           browser: detectBrowser(),
         });
-        setSmsConsent(true); // Reset checkbox to checked
+        setSmsConsent(false); // Reset checkbox to checked
       }
     } catch (error) {
       console.error("Error submitting form:", error);
