@@ -13,10 +13,48 @@ const Warranty = () => {
       <section className="warranty-section">
         <div className="warranty-overlay">
           <div className="warranty-content">
-            <h2 className="warranty-heading">WARRANTY POLICY</h2>
-            <h3 className="warranty-subheading">FNP Autoparts Engine & Transmission Warranty Terms</h3>
+            <h2 className="warranty-heading">TERMS & CONDITIONS</h2>
+            <h3 className="warranty-subheading">FNP Autoparts Terms of Service</h3>
 
             <div className="warranty-description">
+              <h4>SMS Disclosure and Text Messaging Terms</h4>
+              <p><strong>By providing your phone number, you agree to receive a text message from FNP Auto Parts. Message and Data rates may apply. Message frequency varies. To stop receiving messages, reply 'STOP' at any time. For more information, reply 'HELP'.</strong></p>
+              
+              <p>By using our website and services, you consent to receive the following types of text messages from FNP Auto Parts:</p>
+              <ul>
+                <li>Order confirmations and shipping updates</li>
+                <li>Customer service communications</li>
+                <li>Promotional offers and marketing messages (if opted in)</li>
+                <li>Important service announcements</li>
+              </ul>
+
+              <p>Message frequency varies based on your interaction with our services. Standard message and data rates may apply depending on your mobile carrier and plan. You are responsible for all charges associated with text messages, including those from your mobile carrier.</p>
+
+              <p>To opt out of text messages, reply 'STOP' to any message. To get help, reply 'HELP' to any message or contact our customer service. By participating in our text messaging program, you confirm that you are the account holder or have authorization to receive texts at the provided number.</p>
+
+              <h4>Website Terms of Use</h4>
+              <p>These terms govern how you interact with our website and services. By accessing or using our website, you agree to be bound by these terms and conditions.</p>
+
+              <h4>Prohibited Conduct</h4>
+              <p>You agree not to:</p>
+              <ul>
+                <li>Use our website for any unlawful purpose or in violation of these terms</li>
+                <li>Attempt to gain unauthorized access to our systems or networks</li>
+                <li>Interfere with or disrupt the operation of our website</li>
+                <li>Upload or transmit viruses, malware, or other harmful content</li>
+                <li>Engage in fraudulent activities or misrepresent your identity</li>
+                <li>Violate any applicable laws or regulations</li>
+              </ul>
+
+              <h4>Usage Restrictions</h4>
+              <p>Our website and content are provided for personal, non-commercial use. You may not reproduce, distribute, modify, or create derivative works from our content without written permission.</p>
+
+              <h4>Liability Limitations</h4>
+              <p>FNP Auto Parts shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our website or services. Our total liability shall not exceed the amount you paid for the products or services in question.</p>
+
+              <h4>WARRANTY POLICY</h4>
+              <h3 className="warranty-subheading">FNP Autoparts Engine & Transmission Warranty Terms</h3>
+
               <h4>Used Engine Warranty –</h4>
               <p>This warranty applies to the engine cylinder head and block assembly. Our warranty excludes the coverage of the following accessories: fuel injection components, carburettor, intake and exhaust manifolds, distributor, alternator, emission control devices, smog pump and components, seals, timing belt (and any related tensioner, tensioner adjusters, and/or idler bearings), timing cover, thermostat, water pump, flywheel or flex plate, pulleys, valve cover, sensors, switches, oil pan and oil pickup tube, turbocharger, and intercooler (where applicable). The above parts must be replaced or swapped from your old original engine. Please note that labor costs are not covered under warranty.</p>
               <p>Warranty covers only its performance not the appearance or cosmetic damages, there may be rust, scratches or dents on the appearance.</p>
@@ -47,7 +85,7 @@ const Warranty = () => {
                 <li>The engine was not properly installed by the mechanic or workshop.</li>
                 <li>The engine was installed by the customer himself under no guidance.</li>
                 <li>The engine was used for racing.</li>
-                <li>The vehicles modified in any way outside manufacturer’s specifications.</li>
+                <li>The vehicles modified in any way outside manufacturer's specifications.</li>
                 <li>The engine was used without proper lubrication or cooling regardless of the reason.</li>
                 <li>Any tune ups and adjustments in belts, hoses, filters, emission-control devices, sparkplugs.</li>
               </ul>
@@ -78,7 +116,7 @@ const Warranty = () => {
               <ul>
                 <li>The transmission was not properly installed by the mechanic or workshop.</li>
                 <li>The transmission was used for racing.</li>
-                <li>The vehicles modified in any way outside manufacturer’s specifications.</li>
+                <li>The vehicles modified in any way outside manufacturer's specifications.</li>
                 <li>The transmission was used without proper lubrication or cooling regardless of the reason.</li>
                 <li>Any tune ups and adjustments in belts, hoses, filters, emission-control devices, spark plugs.</li>
               </ul>

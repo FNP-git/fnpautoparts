@@ -26,6 +26,7 @@ const Privacy = () => {
                 <li>Contact Details: Name, email address, phone number, and shipping address.</li>
                 <li>Payment Information: Credit/debit card details or other payment details via secure third-party payment providers.</li>
                 <li>Account Information: Username, password, and order history if you create an account.</li>
+                <li>Messaging Data: Text message communications and mobile opt-in information for campaign tracking and analytics.</li>
               </ul>
 
               <p><strong>b. Non-Personal Information</strong></p>
@@ -43,6 +44,7 @@ const Privacy = () => {
                 <li>Send promotional offers and updates (if you opt-in).</li>
                 <li>Prevent fraudulent transactions and enhance security.</li>
                 <li>Comply with legal obligations.</li>
+                <li>Campaign tracking and analytics.</li>
               </ul>
 
               <h4>3. Sharing Your Information</h4>
@@ -51,9 +53,14 @@ const Privacy = () => {
                 <li>Service Providers: Payment processors, shipping partners, and marketing platforms.</li>
                 <li>Legal Authorities: If required by law or to protect our legal rights.</li>
                 <li>Business Transfers: In case of a merger, sale, or acquisition of our business.</li>
+                <li>Carriers: For registration purposes only.</li>
               </ul>
 
-              <h4>4. Cookies & Tracking Technologies</h4>
+              <h4>4. Mobile Information and Third-Party Sharing</h4>
+              <p><strong>Mobile information will not be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</strong></p>
+              <p><strong>If you wish to be removed from receiving future communications, you can opt out by texting STOP, QUIT.</strong></p>
+
+              <h4>5. Cookies & Tracking Technologies</h4>
               <ul>
                 <li>Improve site functionality.</li>
                 <li>Analyze visitor behavior.</li>
@@ -61,10 +68,10 @@ const Privacy = () => {
               </ul>
               <p>You can manage cookie preferences through your browser settings.</p>
 
-              <h4>5. Data Security</h4>
+              <h4>6. Data Security</h4>
               <p>We take reasonable security measures to protect your data, including encryption, secure servers, and restricted access. However, no method of transmission over the internet is 100% secure.</p>
 
-              <h4>6. Your Rights & Choices</h4>
+              <h4>7. Your Rights & Choices</h4>
               <ul>
                 <li>Access, update, or delete your personal information.</li>
                 <li>Opt out of marketing emails by clicking "unsubscribe."</li>
@@ -72,13 +79,13 @@ const Privacy = () => {
               </ul>
               <p>To exercise your rights, contact us at [insert email].</p>
 
-              <h4>7. Third-Party Links</h4>
+              <h4>8. Third-Party Links</h4>
               <p>Our website may contain links to third-party websites. We are not responsible for their privacy practices. Please review their privacy policies before sharing personal information.</p>
 
-              <h4>8. Changes to This Privacy Policy</h4>
+              <h4>9. Changes to This Privacy Policy</h4>
               <p>We may update this policy periodically. Changes will be posted on this page with a revised "Last Updated" date.</p>
 
-              <h4>9. Contact Us</h4>
+              <h4>10. Contact Us</h4>
               <p>If you have any questions about this Privacy Policy, contact us at:</p>
               <p>FNP Auto Parts</p>
             </div>
