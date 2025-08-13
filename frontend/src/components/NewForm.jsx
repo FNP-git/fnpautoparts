@@ -8,7 +8,6 @@ const NewForm = () => {
   const [showMakeDropdown, setShowMakeDropdown] = useState(false);
   const [showModelDropdown, setShowModelDropdown] = useState(false);
 
-  const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
   const [formData, setFormData] = useState({
     leadLabel: "FNPAUTOPARTS",
@@ -76,10 +75,7 @@ const NewForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!privacyAccepted) {
-      alert("Please accept the Privacy Policy to proceed.");
-      return;
-    }
+
 
     try {
       const submissionData = {
@@ -119,7 +115,6 @@ const NewForm = () => {
           phone: "",
           email: "",
         });
-        setPrivacyAccepted(false);
       }
     } catch (err) {
       console.error("Error submitting form:", err);
@@ -280,23 +275,7 @@ const NewForm = () => {
           />
         </div>
 
-        {/* Privacy Policy */}
-        <div className="checkbox-container">
-          <input
-            type="checkbox"
-            id="privacyPolicy"
-            checked={privacyAccepted}
-            onChange={(e) => setPrivacyAccepted(e.target.checked)}
-            className="consent-checkbox"
-          />
-          <label htmlFor="privacyPolicy" className="consent-label">
-            I agree to the{" "}
-            <a href="/privacy" target="_self" rel="noopener noreferrer">
-              Privacy Policy
-            </a>
-            .
-          </label>
-        </div>
+       
 
         <button type="submit">Submit</button>
       </form>

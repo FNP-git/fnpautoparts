@@ -68,12 +68,12 @@ const Offers = () => {
             </header>
 
             <div>
-              <a href="tel:+18888079696" style={{ textDecoration: "none" }}>
+              {/* <a href="tel:+18888079696" style={{ textDecoration: "none" }}> */}
                 <button id="offers-call-btn">
                   <img id="offers-call-icon" src={blucl} alt="call a specialist" />
                   CALL NOW: +18888079696
                 </button>
-              </a>
+              {/* </a> */}
             </div>
 
             <ul id="offers-bullets" className="offers-list">

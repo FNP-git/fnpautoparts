@@ -24,12 +24,12 @@ const Navbar = () => {
       </div>
 
       <div id="call-btn">
-        <a href="tel:+18888079696" style={{ textDecoration: 'none' }}>
+        {/* <a href="tel:+18888079696" style={{ textDecoration: 'none' }}> */}
           <button id="nav-btn">
             <img loading="lazy" id="phn" src={phn_y} alt="call icon" />
             +18888079696
           </button>
-        </a>
+        {/* </a> */}
       </div>
     </div>
     </>
