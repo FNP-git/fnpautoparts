@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const formRoutes = require("./src/routes/formRoutes");
-const offersRoutes = require("./src/routes/offerRoutes");
+const offersRoutes = require("./src/routes/offersRoutes");
 const compression = require('compression');
 const app = express();
 
