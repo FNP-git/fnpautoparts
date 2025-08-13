@@ -14,13 +14,6 @@
   gap: 1vh;
 }
 
-.form-title {
-  font-size: 0.7rem;
-  font-weight: 500;
-  margin-bottom: 0.8vh;
-  color: #fff;
-}
-
 .custom-form label {
   font-size: 0.9rem;
   font-weight: 400;
@@ -40,6 +33,28 @@
   width: 100%;
 }
 
+.custom-form select {
+  padding: 0.8vh 1vw;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.3);
+  color: black;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  appearance: none; /* Remove native dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Custom dropdown arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.7vw center;
+  background-size: 1rem;
+  padding-right: 2rem;
+}
+
 .form-row {
   display: flex;
   gap: 1vw;
@@ -51,7 +66,7 @@
   flex-direction: column;
 }
 
-/* Autocomplete dropdown for Make/Model */
+/* Autocomplete dropdowns for Make/Model */
 .dropdown {
   position: absolute;
   top: 40px;
@@ -74,30 +89,6 @@
   background: #f0f0f0;
 }
 
-/* Selects */
-.custom-form select {
-  padding: 0.8vh 1vw;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  font-size: 0.95rem;
-  background: rgba(255, 255, 255, 0.3);
-  color: black;
-  width: 100%;
-  backdrop-filter: blur(5px);
-  appearance: none; /* Remove native arrow */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  /* Custom dropdown arrow */
-  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 0.7vw center;
-  background-size: 1rem;
-  padding-right: 2rem;
-}
-
-/* Submit button */
 .custom-form button {
   margin-top: 1vh;
   padding: 1vh 1vw;
@@ -117,7 +108,7 @@
   border: 1px solid #feb139;
 }
 
-/* Placeholders */
+/* Light placeholder text for better visibility on dark inputs */
 .custom-form input::placeholder,
 .custom-form select::placeholder,
 textarea::placeholder {
@@ -125,37 +116,15 @@ textarea::placeholder {
   opacity: 1;
 }
 
-/* Optional layout helper (unused here but kept) */
-.last-row {
-  display: flex;
-  gap: 1vw;
-}
-
-/* ===== Privacy Policy row — centered, side-by-side ===== */
+/* Checkbox row */
 .checkbox-container {
   display: flex;
-  align-items: center;      /* vertical alignment */
-  justify-content: center;  /* center the whole row */
+  align-items: flex-start;
   gap: 0.6rem;
-  width: 100%;
-  margin: 0.4rem 0 0.2rem;
 }
 
-.checkbox-container .consent-checkbox,
-.checkbox-container input[type="checkbox"] {
-  width: 18px !important;
-  height: 18px !important;
-  min-width: 18px;
-  min-height: 18px;
-  margin: 0;
-  accent-color: #feb139;    /* supported browsers */
-}
-
-.checkbox-container .consent-label {
-  font-size: 0.9rem;
-  line-height: 1.25;
-  color: #fff;
-  text-align: center;       /* multi-line stays centered */
+.checkbox-container .consent-checkbox {
+  margin-top: 0.25rem;
 }
 
 .checkbox-container .consent-label a {
@@ -163,22 +132,14 @@ textarea::placeholder {
   text-decoration: underline;
 }
 
-/* ===== Responsive ===== */
-
-/* Tablets and smaller laptops (≤ 1024px) */
+/* Responsive */
 @media screen and (max-width: 1024px) {
   .form-container {
     width: 55vw;
     padding: 2vh 3vw;
   }
-  #cert {
-    margin-top: 5vh;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
-/* Tablets / medium devices (≤ 780px) */
 @media screen and (max-width: 780px) {
   .form-container {
     width: 65vw;
@@ -189,26 +150,19 @@ textarea::placeholder {
     flex-direction: column;
   }
 
-  .email-zip-row,
   .part-details-row {
     flex-direction: row !important;
     flex-wrap: nowrap;
     gap: 1vw;
   }
 
-  .email-zip-row .form-col,
   .part-details-row .form-col {
     flex: 1;
   }
 }
 
-/* Phones (≤ 470px): fill screen width with safe margins */
 @media screen and (max-width: 470px) {
   .form-container {
     width: 95vw;
-  }
-
-  .checkbox-container .consent-label {
-    font-size: 0.85rem;
   }
 }

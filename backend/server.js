@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const formRoutes = require("./src/routes/formRoutes");
+const offerRoutes = require("./src/routes/offerRoutes");
 const compression = require('compression');
 const app = express();
 
@@ -33,6 +34,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/form", formRoutes);
+app.use("/api/offers", offersRoutes); 
 
 // ✅ Start Server
 const PORT = process.env.PORT || 5001;
