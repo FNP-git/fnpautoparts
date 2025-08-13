@@ -59,7 +59,7 @@
 }
 .offers-media{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 4vh 4vw;
   align-items: center;
   justify-content: center;

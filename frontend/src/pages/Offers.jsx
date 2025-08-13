@@ -153,6 +153,12 @@ const Offers = () => {
             loading="lazy"
             className="offers-media-img"
           />
+          <img
+            src={transPallet}
+            alt="Quality-tested used transmissions shipped safely on pallet"
+            loading="lazy"
+            className="offers-media-img"
+          />
         </div>
         <div className="offers-copy">
           <h3 className="offers-mini">1. Wide Selection of Quality-Tested Engines</h3>
@@ -167,14 +173,7 @@ const Offers = () => {
 
       {/* 2. Transmissions (with image, reversed layout) */}
       <article className="offers-block offers-with-media reverse">
-        <div className="offers-media">
-          <img
-            src={transPallet}
-            alt="Quality-tested used transmissions shipped safely on pallet"
-            loading="lazy"
-            className="offers-media-img"
-          />
-        </div>
+       
         <div className="offers-copy">
           <h3 className="offers-mini">2. Comprehensive Transmission Solutions</h3>
           <p className="offers-p">
