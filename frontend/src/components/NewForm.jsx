@@ -88,7 +88,7 @@ const NewForm = () => {
         submissionTime: new Date().toISOString(),
       };
 
-      const response = await fetch("/api/form", {
+      const response = await fetch("/api/offers", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(submissionData),
