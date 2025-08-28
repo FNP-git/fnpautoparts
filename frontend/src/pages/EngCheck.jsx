@@ -5,8 +5,6 @@ import ConfidenceBadges from '../components/ConfidenceBadges';
 import useWorksAnimation from '../hooks/useWorksAnimation';
 
 import starIcon from '../assets/star.png';
-import bbbBadge from '../assets/bbb-badge.png';
-import trustpilotBadge from '../assets/Trustpilot.png';
 import engineCheckImage from '../assets/engine-check.jpeg';
 import car1 from '../assets/car-front.svg';
 import car2 from '../assets/car-side.svg';
@@ -15,8 +13,6 @@ import mileage from '../assets/mileage.png';
 import compression from '../assets/compression.png';
 import warranty from '../assets/warranty.png';
 import seller from '../assets/seller.png';
-import authcert from '../assets/authcert.png';
-import dmca from '../assets/dmca.png';
 import engbg2 from '../assets/engbg2.png';
 
 const checklistItems = [

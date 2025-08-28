@@ -1,7 +1,6 @@
 import React from 'react';
 import './Contact.css';
 import Navbar from '../components/Navbar';
-import contactImage from '../assets/contbg.jpeg'; // Add your image path here
 import Bbb from '../components/Bbb';
 import Footer from '../components/Footer';
 import locIcon from '../assets/loc.svg';
@@ -19,8 +18,8 @@ import {
   FaLinkedinIn,
   FaXTwitter,
 } from 'react-icons/fa6';
+import NewForm from "../components/NewForm";
 
-import Form from '../components/Form';
 
 const Contact = () => {
   return (
@@ -99,7 +98,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-form-card">
-        <Form />
+        <NewForm />
       </div>
     </div>
     <Bbb />

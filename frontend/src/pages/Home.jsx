@@ -6,7 +6,6 @@ import Bbb from '../components/Bbb';
 import NewForm from "../components/NewForm";
 import trust from '../assets/Trustpilot.png';
 import blucl from '../assets/phn-yellow.svg';
-import Form from '../components/Form';
 import CardItem from '../components/CardItem';
 import delivery from '../assets/delivery.svg';
 import payment from '../assets/payment.svg';

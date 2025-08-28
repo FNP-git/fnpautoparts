@@ -3,7 +3,8 @@ import './Engine.css';
 import Bbb from '../components/Bbb';
 import Footer from '../components/Footer';
 import blucl from '../assets/blucall.svg';
-import Form from '../components/Form';
+import NewForm from "../components/NewForm";
+
 import Navbar from '../components/Navbar';
 import EngCheck from './EngCheck';
 import redarw from '../assets/redarw.svg';
@@ -46,7 +47,7 @@ const Engine = () => {
 
         <div id="engine-right">
           <div id="frm">
-            <Form />
+            <NewForm />
           </div>
         </div>
       </div>
@@ -82,7 +83,7 @@ const Engine = () => {
 
         <div id="engine-right">
           <div id="frm">
-            <Form />
+            <NewForm />
           </div>
         </div>
       </div>

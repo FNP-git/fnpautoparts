@@ -2,11 +2,8 @@ import React from 'react';
 import './Transmission.css';
 import Bbb from '../components/Bbb';
 import Footer from '../components/Footer';
-import bbb from '../assets/BBB.png';
-import trust from '../assets/Trustpilot.png';
 import blucl from '../assets/blucall.svg';
-import Form from '../components/Form';
-import dmca from '../assets/dmca.png';
+import NewForm from "../components/NewForm";
 import Navbar from '../components/Navbar';
 import CardItem from '../components/CardItem';
 import TransCheck from './TransCheck';
@@ -48,7 +45,7 @@ const Transmission = () => {
         </div>
         <div id="transmission-right">
           <div id="frm">
-            <Form />
+            <NewForm />
           </div>
         </div>
       </div>
@@ -82,7 +79,7 @@ const Transmission = () => {
         </div>
         <div id="transmission-right">
           <div id="frm">
-            <Form />
+            <NewForm />
           </div>
         </div>
       </div>

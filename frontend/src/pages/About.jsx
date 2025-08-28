@@ -1,8 +1,6 @@
 import React from 'react';
 import './About.css';
 import Navbar from '../components/Navbar';
-import personImage from '../assets/personImage.jpeg';
-import bbbIcon from '../assets/BBB.png';
 import autoLogo from '../assets/autoLogo.png';
 import ConfidenceBadges from '../components/ConfidenceBadges';
 import Works from '../pages/Works';
@@ -10,7 +8,7 @@ import Testimonials from './Testimonials';
 import Scams from './Scams';
 import redarw from '../assets/redarw.svg';
 import blucl from '../assets/blucall.svg';
-import Form from '../components/Form';
+import NewForm from '../components/NewForm';
 import Footer from '../components/Footer';
 import Bbb from '../components/Bbb';
 import HamburgerMenu from '../components/HamburgerMenu';
@@ -119,7 +117,7 @@ const About = () => {
         </div>
         <div id="transmission-right">
           <div id="frm">
-            <Form />
+            <NewForm />
           </div>
         </div>
       </div>
