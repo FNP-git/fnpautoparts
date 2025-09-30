@@ -250,7 +250,18 @@ body {
     margin-top: 40vh;
     gap: 1rem;
   }
-
+  .offers-mini{
+    max-width: 90vw;
+  }
+  .offers-subhd{
+    max-width: 90vw;
+  }
+  .offers-p{
+    max-width: 90vw;
+  }
+  .offers-list{
+    max-width: 90vw;
+  }
   .card-wrapper {
     border-right: none !important;
     width: 48%;
